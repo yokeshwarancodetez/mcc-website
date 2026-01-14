@@ -66,27 +66,26 @@ export default function Header() {
         {/* Top Bar - Premium white background */}
         <div className="bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-16 sm:h-20">
-              <Link href="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
-                <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex-shrink-0">
+            <div className="flex justify-between items-center h-auto sm:h-auto py-3 sm:py-4">
+              <Link href="/" className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 flex-shrink-0">
                   <Image
-                    src="/mcc-logo.jpg"
+                    src="/mcc-logo1.jpeg"
                     alt="Malaysian Ceylonese Congress Logo"
-                    width={64}
-                    height={64}
+                    width={96}
+                    height={96}
                     className="w-full h-full object-contain"
+                    priority
                   />
                 </div>
-                <div className="hidden sm:block">
-                  <p className="font-black text-sm sm:text-base lg:text-lg text-blue-900 leading-tight tracking-tight">
-                    Malaysian Ceylonese
-                  </p>
-                  <p className="text-xs lg:text-sm text-red-700 font-black uppercase tracking-wider">Congress</p>
+                <div className="hidden sm:flex flex-col">
+                  <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900">MCC</h1>
+                  <p className="text-xs sm:text-sm text-blue-900 font-semibold">Malaysian Ceylonese Congress</p>
                 </div>
               </Link>
 
               {/* Desktop Navigation - reduced padding and gaps to prevent overflow */}
-              <nav className="hidden lg:flex items-center flex-1 ml-4 xl:ml-6 gap-0">
+              <nav className="hidden lg:flex items-center flex-1 ml-6 xl:ml-8 gap-0">
                 {navItems.map((item) => (
                   <div
                     key={item.label}
