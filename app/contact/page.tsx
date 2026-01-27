@@ -59,11 +59,11 @@ export default function ContactPage() {
                   <br />
                   Kuala Lumpur, Malaysia
                 </p>
-                <p className="text-sm">
+                {/* <p className="text-sm">
                   <span className="font-bold">Phone:</span> +60 3 XXXX XXXX
-                </p>
+                </p> */}
                 <p className="text-sm">
-                  <span className="font-bold">Email:</span> info@mcc.com
+                  <span className="font-bold">Email:</span> info@mcc1998.com
                 </p>
               </div>
 

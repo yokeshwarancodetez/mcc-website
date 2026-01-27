@@ -18,7 +18,7 @@ export default function MediaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               { title: "Press Releases", icon: "📰", href: "/media/press-releases" },
-              { title: "Speeches", icon: "🎤", href: "/media/speeches" },
+              { title: "Gallery", icon: "🎤", href: "/media/photos" },
               { title: "Articles", icon: "📝", href: "/media/interviews" },
               { title: "Photo Gallery", icon: "📸", href: "/media/photos" },
               { title: "Video Gallery", icon: "🎥", href: "/media/videos" },

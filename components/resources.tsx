@@ -1,30 +1,27 @@
-import { Newspaper, Video, BookOpen, Users } from "lucide-react"
+import { Newspaper, Zap, Users2 } from "lucide-react"
 
 export default function Resources() {
   const resourceCategories = [
     {
       icon: Newspaper,
       title: "Media Resources",
-      items: ["Press Release", "Speeches", "Articles", "Photo Gallery", "Video Gallery"],
+      items: ["Press Releases", "Gallery", "Events", "Make Donation"],
       color: "from-[#CE0000] to-[#B00000]",
+      link: "/media",
     },
     {
-      icon: BookOpen,
-      title: "Literature & Apps",
-      items: ["Books & Monographs", "E-Library", "Infographics", "Mobile App"],
+      icon: Zap,
+      title: "Our Wings",
+      items: ["Youth Morcha", "Women's Wing", "Professional Wing", "Cultural Wing"],
       color: "from-[#003087] to-[#001f52]",
+      link: "/morcha",
     },
     {
-      icon: Users,
+      icon: Users2,
       title: "Organization",
-      items: ["Parliamentary Board", "Central Election Committee", "National Office Bearers", "Departments"],
+      items: ["Branches", "Central Working Committee", "Central Election Committee", "Media", "Speeches"],
       color: "from-[#CE0000] to-[#A00000]",
-    },
-    {
-      icon: Video,
-      title: "Parliament",
-      items: ["Dewan Rakyat Members", "Dewan Negeri Members", "Dewan Negara Members", "Parliamentary Updates"],
-      color: "from-[#003087] to-[#002060]",
+      link: "/organisation",
     },
   ]
 
@@ -38,7 +35,7 @@ export default function Resources() {
         </div>
 
         {/* Resource Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {resourceCategories.map((category, idx) => {
             const Icon = category.icon
             return (

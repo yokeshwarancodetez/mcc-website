@@ -2,7 +2,7 @@ import Header from "@/components/header"
 import Hero from "@/components/hero"
 import History from "@/components/history"
 import FoundersHistory from "@/components/founders-history"
-import CoreValues from "@/components/core-values"
+
 import MissionPillars from "@/components/mission-pillars"
 import Achievements from "@/components/achievements"
 import Programs from "@/components/programs"
@@ -13,6 +13,11 @@ import Resources from "@/components/resources"
 import Organization from "@/components/organization"
 import CallToAction from "@/components/call-to-action"
 import Footer from "@/components/footer"
+import MissionValues from "@/components/mission-values"
+import MCCTimeline from "@/components/mcc-timeline"
+import PurposeObjectives from "@/components/purpose-objectives"
+import RepresentationRecognition from "@/components/representation-recognition"
+import CoreValues from "@/components/core-values"
 
 export default function Home() {
   return (
@@ -21,11 +26,15 @@ export default function Home() {
       <Hero />
       <History />
       <FoundersHistory />
+      <MCCTimeline />
+      <PurposeObjectives />
+      <RepresentationRecognition />
       <CoreValues />
+      <MissionValues/>
       <MissionPillars />
       <Achievements />
       <Programs />
-      <Leadership />
+      {/* <Leadership /> */}
       <Events />
       <Documents />
       <Resources />

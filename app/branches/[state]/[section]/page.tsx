@@ -1,10 +1,1404 @@
-"use client"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import BranchSidebar from "@/components/branch-sidebar"
 import Link from "next/link"
 
 const branchContent: Record<string, Record<string, { title: string; items: any[] }>> = {
+  andalas: {
+    committees: {
+      title: "Andalas Branch Committee",
+      items: [
+        { name: "Andalas Branch Committee", members: 8, established: "1982" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-15",
+          title: "Andalas Branch Community Outreach Program",
+          description: "Community engagement activities in Andalas region...",
+          link: "https://example.com/andalas-program",
+          type: "link",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Local Community Meeting",
+          date: "2024-12-15",
+          link: "#",
+          description: "Vision for Andalas branch development",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Andalas Branch Leadership Interview",
+          author: "Local Reporter",
+          publication: "Community Times",
+          date: "2024-12-20",
+          excerpt: "Leadership shares vision for Andalas community development...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Community Events", date: "2024-12-10" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Andalas Community Highlights",
+          duration: "5:30",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Andalas Branch Guidelines", year: 2023, fileSize: "1.5 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Ahmad Hassan",
+          position: "Branch Chairman",
+          contact: "ahmad@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Community leader with focus on local development",
+          experience: "10+ years",
+          specialty: "Community Relations",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Ahmad Hassan",
+          title: "Chairman",
+          qualification: "B.A.",
+          expertise: "Community Service",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  "batu-caves": {
+    committees: {
+      title: "Batu Caves Branch Committee",
+      items: [
+        { name: "Batu Caves Branch Committee", members: 10, established: "1978" },
+        { name: "Local Coordinators (2)", members: 6, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-14",
+          title: "Batu Caves Heritage Protection Initiative",
+          description: "New conservation effort for historical sites...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Heritage Forum",
+          date: "2024-12-14",
+          link: "#",
+          description: "Preserving Batu Caves heritage",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Batu Caves Branch Initiatives",
+          author: "Community Reporter",
+          publication: "Local News",
+          date: "2024-12-18",
+          excerpt: "Batu Caves branch leading heritage conservation efforts...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Heritage Sites", date: "2024-12-05" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Batu Caves Heritage Tour",
+          duration: "7:15",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Batu Caves Conservation Plan", year: 2024, fileSize: "2.0 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Ramakrishnan V",
+          position: "Branch Chairman",
+          contact: "rama@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Heritage conservation specialist",
+          experience: "12+ years",
+          specialty: "Heritage Management",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Ramakrishnan V",
+          title: "Chairman",
+          qualification: "B.A., M.A.",
+          expertise: "History",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  brickfields: {
+    committees: {
+      title: "Brickfields Branch Committee",
+      items: [
+        { name: "Brickfields Branch Committee", members: 9, established: "1975" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-13",
+          title: "Brickfields Urban Development Project",
+          description: "Community development initiatives in urban center...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Urban Forum",
+          date: "2024-12-13",
+          link: "#",
+          description: "Urban development vision",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Brickfields Urban Renewal",
+          author: "City Reporter",
+          publication: "Urban Times",
+          date: "2024-12-17",
+          excerpt: "Brickfields branch transforming urban landscape...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Urban Projects", date: "2024-12-01" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Brickfields Development",
+          duration: "6:20",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Brickfields Development Plan", year: 2024, fileSize: "2.2 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Suresh Kumar",
+          position: "Branch Chairman",
+          contact: "suresh@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Urban development expert",
+          experience: "14+ years",
+          specialty: "Urban Planning",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Suresh Kumar",
+          title: "Chairman",
+          qualification: "B.Sc., M.B.A.",
+          expertise: "Urban Development",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  cheras: {
+    committees: {
+      title: "Cheras Branch Committee",
+      items: [
+        { name: "Cheras Branch Committee", members: 10, established: "1977" },
+        { name: "Local Coordinators (2)", members: 6, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-12",
+          title: "Cheras Community Empowerment Program",
+          description: "New initiatives for community strengthening...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Community Assembly",
+          date: "2024-12-12",
+          link: "#",
+          description: "Community empowerment strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Cheras Community Development",
+          author: "Community Writer",
+          publication: "Community Weekly",
+          date: "2024-12-16",
+          excerpt: "Cheras branch building stronger communities...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Community Activities", date: "2024-11-28" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Cheras Programs",
+          duration: "5:45",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Cheras Branch Report", year: 2024, fileSize: "1.8 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Mani Chandra",
+          position: "Branch Chairman",
+          contact: "mani@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Community development specialist",
+          experience: "11+ years",
+          specialty: "Community Building",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Mani Chandra",
+          title: "Chairman",
+          qualification: "B.A., M.A.",
+          expertise: "Community Studies",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  damansara: {
+    committees: {
+      title: "Damansara Branch Committee",
+      items: [
+        { name: "Damansara Branch Committee", members: 11, established: "1980" },
+        { name: "Local Coordinators (2)", members: 7, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-11",
+          title: "Damansara Educational Initiative",
+          description: "New scholarship and education programs...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Educational Summit",
+          date: "2024-12-11",
+          link: "#",
+          description: "Education advancement strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Damansara Education Programs",
+          author: "Education Writer",
+          publication: "Education Times",
+          date: "2024-12-15",
+          excerpt: "Damansara branch transforming education sector...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Education Events", date: "2024-11-25" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Damansara Programs",
+          duration: "6:30",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Damansara Education Plan", year: 2024, fileSize: "2.3 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Deepak Sharma",
+          position: "Branch Chairman",
+          contact: "deepak@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Education development leader",
+          experience: "13+ years",
+          specialty: "Education Management",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Deepak Sharma",
+          title: "Chairman",
+          qualification: "B.Sc., M.Ed.",
+          expertise: "Education",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  "jalan-kelang-lama": {
+    committees: {
+      title: "Jalan Kelang Lama Branch Committee",
+      items: [
+        { name: "Jalan Kelang Lama Committee", members: 8, established: "1976" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-10",
+          title: "Jalan Kelang Lama Heritage Conservation",
+          description: "Protecting historical significance of the area...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Heritage Preservation Forum",
+          date: "2024-12-10",
+          link: "#",
+          description: "Preserving local heritage",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Jalan Kelang Lama Heritage",
+          author: "Heritage Reporter",
+          publication: "History Times",
+          date: "2024-12-14",
+          excerpt: "Jalan Kelang Lama preserving cultural heritage...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Historical Sites", date: "2024-11-20" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Heritage Conservation",
+          duration: "7:00",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Heritage Conservation Report", year: 2023, fileSize: "1.9 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Vishnu Kumar",
+          position: "Branch Chairman",
+          contact: "vishnu@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Heritage preservation advocate",
+          experience: "9+ years",
+          specialty: "Heritage Conservation",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Vishnu Kumar",
+          title: "Chairman",
+          qualification: "B.A., M.A.",
+          expertise: "Heritage Studies",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  klang: {
+    committees: {
+      title: "Klang Branch Committee",
+      items: [
+        { name: "Klang Branch Committee", members: 11, established: "1979" },
+        { name: "Local Coordinators (2)", members: 6, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-09",
+          title: "Klang Port City Development",
+          description: "New economic initiatives for port city...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Economic Development Forum",
+          date: "2024-12-09",
+          link: "#",
+          description: "Economic growth strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Klang Economic Development",
+          author: "Economic Reporter",
+          publication: "Business Journal",
+          date: "2024-12-13",
+          excerpt: "Klang branch driving port city economy...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Port Activities", date: "2024-11-15" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Klang Development",
+          duration: "6:50",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Klang Development Strategy", year: 2024, fileSize: "2.4 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Selvam Retnam",
+          position: "Branch Chairman",
+          contact: "selvam@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Economic development specialist",
+          experience: "15+ years",
+          specialty: "Business Development",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Selvam Retnam",
+          title: "Chairman",
+          qualification: "B.Sc., M.B.A.",
+          expertise: "Economics",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  "mt-kiara": {
+    committees: {
+      title: "Mt. Kiara Branch Committee",
+      items: [
+        { name: "Mt. Kiara Branch Committee", members: 12, established: "1985" },
+        { name: "Local Coordinators (2)", members: 7, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-08",
+          title: "Mt. Kiara Environmental Conservation",
+          description: "Green initiatives for sustainable living...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Environmental Forum",
+          date: "2024-12-08",
+          link: "#",
+          description: "Environmental protection strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Mt. Kiara Green Initiative",
+          author: "Environment Reporter",
+          publication: "Green Times",
+          date: "2024-12-12",
+          excerpt: "Mt. Kiara branch leading environmental conservation...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Environmental Projects", date: "2024-11-10" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Green Initiatives",
+          duration: "7:30",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Environmental Initiative Report", year: 2024, fileSize: "2.5 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Anita Kapoor",
+          position: "Branch Chairman",
+          contact: "anita@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Environmental sustainability leader",
+          experience: "12+ years",
+          specialty: "Environmental Management",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Anita Kapoor",
+          title: "Chairman",
+          qualification: "B.Sc., M.Sc.",
+          expertise: "Environmental Science",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  penang: {
+    committees: {
+      title: "Penang Branch Committee",
+      items: [
+        { name: "Penang Branch Committee", members: 13, established: "1968" },
+        { name: "Local Coordinators (2)", members: 8, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-07",
+          title: "Penang Cultural Heritage Initiative",
+          description: "Preserving Penang's rich cultural legacy...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Cultural Summit",
+          date: "2024-12-07",
+          link: "#",
+          description: "Cultural preservation vision",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Penang Cultural Renaissance",
+          author: "Cultural Reporter",
+          publication: "Heritage Magazine",
+          date: "2024-12-11",
+          excerpt: "Penang branch preserving island heritage...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Heritage Events", date: "2024-11-05" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Penang Heritage Tour",
+          duration: "8:15",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Penang Heritage Report", year: 2024, fileSize: "2.6 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Leong Wei Keat",
+          position: "Branch Chairman",
+          contact: "leong@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Heritage conservation champion",
+          experience: "16+ years",
+          specialty: "Cultural Heritage",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Leong Wei Keat",
+          title: "Chairman",
+          qualification: "B.A., M.A.",
+          expertise: "History",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  "pj-north": {
+    committees: {
+      title: "PJ North Branch Committee",
+      items: [
+        { name: "PJ North Branch Committee", members: 10, established: "1981" },
+        { name: "Local Coordinators (2)", members: 6, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-06",
+          title: "PJ North Urban Transformation",
+          description: "Modern urban development initiatives...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Urban Forum",
+          date: "2024-12-06",
+          link: "#",
+          description: "Urban transformation strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "PJ North Development",
+          author: "Urban Reporter",
+          publication: "City Times",
+          date: "2024-12-10",
+          excerpt: "PJ North branch modernizing suburban communities...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Urban Projects", date: "2024-10-30" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "PJ North Projects",
+          duration: "6:40",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "PJ North Development Plan", year: 2024, fileSize: "2.2 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Prem Nath",
+          position: "Branch Chairman",
+          contact: "prem@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Urban development expert",
+          experience: "11+ years",
+          specialty: "Urban Planning",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Prem Nath",
+          title: "Chairman",
+          qualification: "B.Sc., M.B.A.",
+          expertise: "Urban Development",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  pudu: {
+    committees: {
+      title: "Pudu Branch Committee",
+      items: [
+        { name: "Pudu Branch Committee", members: 9, established: "1974" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-05",
+          title: "Pudu Community Welfare Program",
+          description: "Comprehensive welfare initiatives for residents...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Welfare Forum",
+          date: "2024-12-05",
+          link: "#",
+          description: "Community welfare strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Pudu Welfare Initiative",
+          author: "Social Reporter",
+          publication: "Community News",
+          date: "2024-12-09",
+          excerpt: "Pudu branch addressing community welfare needs...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Welfare Programs", date: "2024-10-25" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Community Welfare",
+          duration: "5:50",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Pudu Welfare Report", year: 2024, fileSize: "1.7 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Nagaraj Iyer",
+          position: "Branch Chairman",
+          contact: "nagaraj@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Social welfare leader",
+          experience: "10+ years",
+          specialty: "Community Welfare",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Nagaraj Iyer",
+          title: "Chairman",
+          qualification: "B.A., M.S.W.",
+          expertise: "Social Work",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  sentul: {
+    committees: {
+      title: "Sentul Branch Committee",
+      items: [
+        { name: "Sentul Branch Committee", members: 8, established: "1980" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-04",
+          title: "Sentul Youth Development Program",
+          description: "Empowering young people in Sentul region...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Youth Summit",
+          date: "2024-12-04",
+          link: "#",
+          description: "Youth development vision",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Sentul Youth Programs",
+          author: "Youth Reporter",
+          publication: "Youth Magazine",
+          date: "2024-12-08",
+          excerpt: "Sentul branch empowering local youth...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Youth Activities", date: "2024-10-20" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Youth Programs",
+          duration: "6:10",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Sentul Youth Program Report", year: 2024, fileSize: "1.6 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Harish Krishnan",
+          position: "Branch Chairman",
+          contact: "harish@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Youth development specialist",
+          experience: "9+ years",
+          specialty: "Youth Empowerment",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Harish Krishnan",
+          title: "Chairman",
+          qualification: "B.A., M.A.",
+          expertise: "Youth Studies",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  seremban: {
+    committees: {
+      title: "Seremban Branch Committee",
+      items: [
+        { name: "Seremban Branch Committee", members: 8, established: "1975" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-03",
+          title: "Seremban State Development Initiative",
+          description: "Comprehensive development program for Seremban...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "State Development Forum",
+          date: "2024-12-03",
+          link: "#",
+          description: "State development strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Seremban Development Vision",
+          author: "State Reporter",
+          publication: "State Times",
+          date: "2024-12-07",
+          excerpt: "Seremban branch driving state development...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Development Projects", date: "2024-10-15" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Seremban Initiatives",
+          duration: "6:25",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Seremban Development Plan", year: 2024, fileSize: "2.0 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Vimala Krishnan",
+          position: "Branch Chairman",
+          contact: "vimala@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "State development leader",
+          experience: "14+ years",
+          specialty: "State Development",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Vimala Krishnan",
+          title: "Chairman",
+          qualification: "B.Sc., M.B.A.",
+          expertise: "Development Studies",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  "taman-yarl": {
+    committees: {
+      title: "Taman Yarl Branch Committee",
+      items: [
+        { name: "Taman Yarl Branch Committee", members: 7, established: "1979" },
+        { name: "Local Coordinators (1)", members: 4, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-02",
+          title: "Taman Yarl Community Building",
+          description: "Strengthening community bonds in Taman Yarl...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Community Meeting",
+          date: "2024-12-02",
+          link: "#",
+          description: "Community building strategies",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Taman Yarl Community Initiative",
+          author: "Local Reporter",
+          publication: "Community Gazette",
+          date: "2024-12-06",
+          excerpt: "Taman Yarl branch strengthening local bonds...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Community Events", date: "2024-10-10" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Community Highlights",
+          duration: "5:20",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Taman Yarl Community Report", year: 2024, fileSize: "1.5 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Saravanan Pillai",
+          position: "Branch Chairman",
+          contact: "saravanan@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Community building advocate",
+          experience: "8+ years",
+          specialty: "Community Relations",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Saravanan Pillai",
+          title: "Chairman",
+          qualification: "B.A.",
+          expertise: "Community Service",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
+  ampang: {
+    committees: {
+      title: "Ampang Branch Committee",
+      items: [
+        { name: "Ampang Branch Committee", members: 9, established: "1983" },
+        { name: "Local Coordinators (2)", members: 5, established: "Various" },
+      ],
+    },
+    pressreleases: {
+      title: "Press Releases",
+      items: [
+        {
+          date: "2025-01-01",
+          title: "Ampang Community Services",
+          description: "Expanding community services in Ampang region...",
+          link: "#",
+          type: "article",
+        },
+      ],
+    },
+    speeches: {
+      title: "Speeches",
+      items: [
+        {
+          speaker: "Branch Chairman",
+          event: "Service Summit",
+          date: "2024-12-01",
+          link: "#",
+          description: "Community service expansion",
+        },
+      ],
+    },
+    interviews: {
+      title: "Articles",
+      items: [
+        {
+          title: "Ampang Services Expansion",
+          author: "Service Reporter",
+          publication: "Service Review",
+          date: "2024-12-05",
+          excerpt: "Ampang branch expanding community services...",
+          image: "/placeholder.svg?height=300&width=400",
+        },
+      ],
+    },
+    photogallery: {
+      title: "Photo Gallery",
+      items: [
+        { image: "/placeholder.svg?height=250&width=300", caption: "Service Programs", date: "2024-10-05" },
+      ],
+    },
+    videogallery: {
+      title: "Video Gallery",
+      items: [
+        {
+          title: "Ampang Services",
+          duration: "5:40",
+          link: "#",
+          thumbnail: "/placeholder.svg?height=200&width=300",
+        },
+      ],
+    },
+    documents: {
+      title: "Documents",
+      items: [{ name: "Ampang Service Report", year: 2024, fileSize: "1.8 MB", link: "#", fileType: "PDF" }],
+    },
+    leadership: {
+      title: "Leadership",
+      items: [
+        {
+          name: "Vinay Menon",
+          position: "Branch Chairman",
+          contact: "vinay@mcc.org",
+          image: "/mcc-president.jpg",
+          bio: "Community services leader",
+          experience: "10+ years",
+          specialty: "Service Management",
+        },
+      ],
+    },
+    members: {
+      title: "Branch Members",
+      items: [
+        {
+          name: "Vinay Menon",
+          title: "Chairman",
+          qualification: "B.A., M.B.A.",
+          expertise: "Service Management",
+          image: "/mcc-president.jpg",
+        },
+      ],
+    },
+  },
   selangor: {
     committees: {
       title: "State Committees",
@@ -326,114 +1720,114 @@ const branchContent: Record<string, Record<string, { title: string; items: any[]
       ],
     },
   },
-  penang: {
-    committees: {
-      title: "State Committees",
-      items: [
-        { name: "Penang State Committee", members: 20, established: "1980" },
-        { name: "District Committees (4)", members: 75, established: "Various" },
-      ],
-    },
-    pressreleases: {
-      title: "Press Releases",
-      items: [
-        {
-          date: "2025-01-18",
-          title: "Penang Heritage Conservation Initiative",
-          description: "New program to preserve cultural landmarks...",
-          link: "#",
-          type: "article",
-          image: "/placeholder.svg?height=200&width=300",
-        },
-        {
-          date: "2025-01-05",
-          title: "Penang Coastal Cleanup Drive",
-          description: "Community participation in environmental conservation...",
-          link: "#",
-          type: "video",
-          image: "/placeholder.svg?height=200&width=300",
-        },
-      ],
-    },
-    speeches: {
-      title: "Speeches",
-      items: [
-        {
-          speaker: "State Chairman",
-          event: "Heritage Summit 2024",
-          date: "2024-12-20",
-          link: "#",
-          description: "Preserving Penang's cultural legacy",
-        },
-      ],
-    },
-    interviews: {
-      title: "Articles",
-      items: [
-        {
-          title: "Penang's Cultural Renaissance",
-          author: "Chua Ming",
-          publication: "Penang Gazette",
-          date: "2024-12-22",
-          excerpt: "MCC's vision for heritage preservation and cultural tourism in Penang...",
-          image: "/placeholder.svg?height=300&width=400",
-        },
-      ],
-    },
-    photogallery: {
-      title: "Photo Gallery",
-      items: [
-        { image: "/placeholder.svg?height=250&width=300", caption: "Heritage Sites", date: "2024-12-15" },
-        { image: "/placeholder.svg?height=250&width=300", caption: "Community Events", date: "2024-11-20" },
-      ],
-    },
-    videogallery: {
-      title: "Video Gallery",
-      items: [
-        {
-          title: "Penang Cultural Tour",
-          duration: "9:30",
-          link: "#",
-          thumbnail: "/placeholder.svg?height=200&width=300",
-        },
-      ],
-    },
-    documents: {
-      title: "Documents",
-      items: [{ name: "Penang Branch Report", year: 2024, fileSize: "2.1 MB", link: "#", fileType: "PDF" }],
-    },
-    leadership: {
-      title: "Leadership",
-      items: [
-        {
-          name: "Chua Ming",
-          position: "State Chairman",
-          contact: "chuaming@mcc.org",
-          image: "/mcc-president.jpg",
-          bio: "Heritage conservation advocate",
-        },
-      ],
-    },
-    members: {
-      title: "Branch Members",
-      items: [
-        {
-          name: "Chua Ming",
-          title: "Chairman",
-          qualification: "B.A., M.A.",
-          expertise: "Heritage Studies",
-          image: "/mcc-president.jpg",
-        },
-        {
-          name: "Nurul Aisyah",
-          title: "Secretary",
-          qualification: "B.A.",
-          expertise: "Community Engagement",
-          image: "/mcc-general-secretary.jpg",
-        },
-      ],
-    },
-  },
+  // penang: {
+  //   committees: {
+  //     title: "State Committees",
+  //     items: [
+  //       { name: "Penang State Committee", members: 20, established: "1980" },
+  //       { name: "District Committees (4)", members: 75, established: "Various" },
+  //     ],
+  //   },
+  //   pressreleases: {
+  //     title: "Press Releases",
+  //     items: [
+  //       {
+  //         date: "2025-01-18",
+  //         title: "Penang Heritage Conservation Initiative",
+  //         description: "New program to preserve cultural landmarks...",
+  //         link: "#",
+  //         type: "article",
+  //         image: "/placeholder.svg?height=200&width=300",
+  //       },
+  //       {
+  //         date: "2025-01-05",
+  //         title: "Penang Coastal Cleanup Drive",
+  //         description: "Community participation in environmental conservation...",
+  //         link: "#",
+  //         type: "video",
+  //         image: "/placeholder.svg?height=200&width=300",
+  //       },
+  //     ],
+  //   },
+  //   speeches: {
+  //     title: "Speeches",
+  //     items: [
+  //       {
+  //         speaker: "State Chairman",
+  //         event: "Heritage Summit 2024",
+  //         date: "2024-12-20",
+  //         link: "#",
+  //         description: "Preserving Penang's cultural legacy",
+  //       },
+  //     ],
+  //   },
+  //   interviews: {
+  //     title: "Articles",
+  //     items: [
+  //       {
+  //         title: "Penang's Cultural Renaissance",
+  //         author: "Chua Ming",
+  //         publication: "Penang Gazette",
+  //         date: "2024-12-22",
+  //         excerpt: "MCC's vision for heritage preservation and cultural tourism in Penang...",
+  //         image: "/placeholder.svg?height=300&width=400",
+  //       },
+  //     ],
+  //   },
+  //   photogallery: {
+  //     title: "Photo Gallery",
+  //     items: [
+  //       { image: "/placeholder.svg?height=250&width=300", caption: "Heritage Sites", date: "2024-12-15" },
+  //       { image: "/placeholder.svg?height=250&width=300", caption: "Community Events", date: "2024-11-20" },
+  //     ],
+  //   },
+  //   videogallery: {
+  //     title: "Video Gallery",
+  //     items: [
+  //       {
+  //         title: "Penang Cultural Tour",
+  //         duration: "9:30",
+  //         link: "#",
+  //         thumbnail: "/placeholder.svg?height=200&width=300",
+  //       },
+  //     ],
+  //   },
+  //   documents: {
+  //     title: "Documents",
+  //     items: [{ name: "Penang Branch Report", year: 2024, fileSize: "2.1 MB", link: "#", fileType: "PDF" }],
+  //   },
+  //   leadership: {
+  //     title: "Leadership",
+  //     items: [
+  //       {
+  //         name: "Chua Ming",
+  //         position: "State Chairman",
+  //         contact: "chuaming@mcc.org",
+  //         image: "/mcc-president.jpg",
+  //         bio: "Heritage conservation advocate",
+  //       },
+  //     ],
+  //   },
+  //   members: {
+  //     title: "Branch Members",
+  //     items: [
+  //       {
+  //         name: "Chua Ming",
+  //         title: "Chairman",
+  //         qualification: "B.A., M.A.",
+  //         expertise: "Heritage Studies",
+  //         image: "/mcc-president.jpg",
+  //       },
+  //       {
+  //         name: "Nurul Aisyah",
+  //         title: "Secretary",
+  //         qualification: "B.A.",
+  //         expertise: "Community Engagement",
+  //         image: "/mcc-general-secretary.jpg",
+  //       },
+  //     ],
+  //   },
+  // },
   johor: {
     committees: {
       title: "State Committees",

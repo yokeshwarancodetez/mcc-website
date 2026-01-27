@@ -7,40 +7,40 @@ export default function CoreValues() {
       title: "Integrity",
       description: "Transparent and accountable leadership in every endeavour.",
       color: "from-[#CE0000] to-[#b20000]",
-      bgColor: "bg-[#CE0000]/5",
+      bgColor: "bg-white",
     },
     {
       image: "/unity-hands-together-symbol.jpg",
       title: "Unity",
       description: "Fostering common ground and shared destiny across communities.",
       color: "from-[#003087] to-[#001f52]",
-      bgColor: "bg-[#003087]/5",
+      bgColor: "bg-white",
     },
     {
       image: "/service-seva-community-hands.jpg",
       title: "Service (Seva)",
       description: "Putting people first and generating tangible impact.",
       color: "from-[#CE0000] to-[#b20000]",
-      bgColor: "bg-[#CE0000]/5",
+      bgColor: "bg-white",
     },
     {
       image: "/excellence-star-achievement.jpg",
       title: "Excellence",
       description: "Pursuing high standards in education, culture and governance.",
       color: "from-[#003087] to-[#001f52]",
-      bgColor: "bg-[#003087]/5",
+      bgColor: "bg-white",
     },
   ]
 
   return (
-    <section className="w-full py-20 bg-gradient-to-b from-white to-[#f9f9f9]">
+    <section className="w-full py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-16 space-y-4 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">Our Mission & Values</h2>
+          <h2 className="text-4xl sm:text-5xl font-bold text-black">Our Core Values</h2>
           <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             MCC exists to empower the Malaysian Ceylonese community through education, cultural preservation, social
-            welfare and civic participation—while furthering national unity and shared prosperity.
+            welfare and civic participation while furthering unity and shared prosperity.
           </p>
         </div>
 
@@ -50,7 +50,10 @@ export default function CoreValues() {
             return (
               <div
                 key={idx}
-                className={`group relative overflow-hidden rounded-xl p-8 ${value.bgColor} border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-xl`}
+                className={`group relative overflow-hidden rounded-xl p-8 ${value.bgColor} border-l-4 transition-all duration-300 hover:shadow-xl`}
+                style={{
+                  borderLeftColor: value.color.includes('CE0000') ? '#CE0000' : '#003087',
+                }}
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${value.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
@@ -68,11 +71,11 @@ export default function CoreValues() {
           })}
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <button className="px-8 py-3 bg-[#CE0000] text-white rounded-lg font-semibold hover:bg-[#b20000] transition-colors shadow-lg">
             Read the Mission
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   )

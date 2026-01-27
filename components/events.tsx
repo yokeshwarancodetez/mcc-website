@@ -1,4 +1,5 @@
 import { Calendar, MapPin, Clock } from "lucide-react"
+import Link from "next/link"
 
 export default function Events() {
   const news = [
@@ -75,11 +76,13 @@ export default function Events() {
             ))}
           </div>
 
-          <div className="text-center">
-            <button className="px-8 py-3 border-2 border-[#CE0000] text-[#CE0000] font-bold rounded-lg hover:bg-[#CE0000]/5 transition-colors">
-              View All News
-            </button>
-          </div>
+        <div className="text-center">
+  <Link href="/media/interviews">
+    <button className="px-8 py-3 border-2 border-[#CE0000] text-[#CE0000] font-bold rounded-lg hover:bg-[#CE0000]/5 transition-colors">
+      View All News
+    </button>
+  </Link>
+</div>
         </div>
 
         {/* Upcoming Events Section */}

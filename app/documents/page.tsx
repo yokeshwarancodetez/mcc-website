@@ -8,41 +8,47 @@ export default function DocumentsPage() {
       description: "The complete constitutional framework governing MCC operations and policies",
       date: "2024",
       icon: "📋",
+      file: "/documents/mcc-constitution.pdf",
     },
     {
       title: "Election Manifesto 2024",
       description: "Our comprehensive manifesto outlining vision and policies for national development",
       date: "2024",
       icon: "🗳️",
+      file: "/documents/election-manifesto-2024.pdf",
     },
     {
       title: "Annual Report 2023",
       description: "Comprehensive report of MCC activities, achievements, and financial statements",
       date: "2023",
       icon: "📊",
+      file: "/documents/annual-report-2023.pdf",
     },
     {
       title: "Policy Documents",
       description: "Official policy papers on education, welfare, and community development",
       date: "2024",
       icon: "📄",
+      file: "/documents/policy-documents.pdf",
     },
     {
       title: "Member Handbook",
       description: "Guidelines and information for MCC members and supporters",
       date: "2023",
       icon: "📖",
+      file: "/documents/member-handbook.pdf",
     },
     {
       title: "Code of Ethics",
       description: "Ethical guidelines and conduct standards for all party members",
       date: "2024",
       icon: "⚖️",
+      file: "/documents/code-of-ethics.pdf",
     },
   ]
 
   return (
-    <main className="flex flex-col w-full">
+    <main className="flex flex-col w-full min-h-screen">
       <Header />
 
       {/* Hero Section */}
@@ -56,24 +62,32 @@ export default function DocumentsPage() {
       </section>
 
       {/* Documents Grid */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <section className="py-12 sm:py-16 lg:py-20 bg-gray-50 flex-1">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {documents.map((doc, index) => (
-              <div
+              <a
                 key={index}
-                className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow border-l-4 border-[#CE0000]"
+                href={doc.file}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all border-l-4 border-[#CE0000] flex flex-col justify-between"
               >
-                <div className="text-4xl mb-4">{doc.icon}</div>
-                <h3 className="text-xl font-bold text-[#003087] mb-2">{doc.title}</h3>
-                <p className="text-gray-600 mb-4">{doc.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-500">{doc.date}</span>
-                  <button className="px-4 py-2 bg-[#CE0000] text-white rounded hover:bg-[#B00000] transition-colors text-sm font-bold">
-                    Download
-                  </button>
+                <div>
+                  <div className="text-4xl mb-4">{doc.icon}</div>
+                  <h3 className="text-xl font-bold text-[#003087] mb-2 group-hover:underline">
+                    {doc.title}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{doc.description}</p>
                 </div>
-              </div>
+
+                <div className="flex justify-between items-center mt-4">
+                  <span className="text-sm font-semibold text-gray-500">{doc.date}</span>
+                  <span className="text-sm font-bold text-[#CE0000] group-hover:text-[#003087] transition">
+                    Download →
+                  </span>
+                </div>
+              </a>
             ))}
           </div>
         </div>

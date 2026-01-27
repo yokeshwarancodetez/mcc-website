@@ -7,9 +7,9 @@ export default function History() {
           <div className="flex items-center gap-3">
             <div className="w-1 h-8 bg-[#003087] rounded"></div>
             <div>
-              <p className="text-[#003087] font-semibold text-sm">About MCC</p>
+              <p className="text-[#003087] font-semibold text-sm">Honouring Our Roots, Building Our Future</p>
               <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
-                Six Decades of Service for the Malaysian Ceylonese Community
+                Six Decades of Service to the Malaysian Ceylonese Community
               </h2>
             </div>
           </div>
@@ -17,53 +17,36 @@ export default function History() {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Column */}
-          <div className="space-y-6">
-            <div className="bg-gradient-to-br from-[#CE0000]/5 to-white rounded-lg p-8 border-l-4 border-[#CE0000] shadow-lg hover:shadow-xl transition-shadow">
-              <p className="text-gray-700 leading-relaxed text-lg font-medium">
-                Founded in 1958, following the transformation of the Selangor State Ceylonese Association under M.W.
-                Navaratnam, MCC operates to promote the political, educational, social and cultural interests of
-                Malaysians of Ceylonese origin. Today we carry forward that legacy to empower youth, preserve heritage,
-                and build unity.
+          {/* Left Column - Two Paragraphs in same card */}
+          <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-md hover:shadow-lg transition-shadow">
+            <div className="space-y-6">
+              {/* Paragraph 1 */}
+              <p className="text-gray-700 leading-relaxed text-lg">
+                Founded in 1958, the Malaysian Ceylonese Congress has been the cornerstone of the Sri Lankan Tamil community in Malaysia for over six decades. Our journey began with a vision to preserve our cultural heritage while fostering integration into Malaysian society.
+              </p>
+
+              {/* Paragraph 2 */}
+              <p className="text-gray-700 leading-relaxed text-lg">
+                From humble beginnings with just 50 founding members, MCC has grown into a vibrant organization representing thousands of families across Malaysia. We have weathered political changes, economic challenges, and social transformations while maintaining our commitment to seva (service).
               </p>
             </div>
           </div>
 
-          {/* Right Column - Stats */}
-          <div className="space-y-4">
-            <div className="bg-gradient-to-br from-[#003087] to-[#001f52] rounded-lg p-6 border border-[#003087] shadow-lg">
-              <h3 className="text-lg font-bold text-white mb-6">Our Impact</h3>
-              <div className="space-y-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#003087] flex items-center justify-center shadow-md">
-                    <span className="text-white font-bold">✓</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">60+ Years of Service</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#CE0000] flex items-center justify-center shadow-md">
-                    <span className="text-white font-bold">✓</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">2,000+ Scholarships Awarded</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[#CE0000] flex items-center justify-center shadow-md">
-                    <span className="text-white font-bold">✓</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-white">5,000+ Families Supported</p>
-                  </div>
-                </div>
-              </div>
+          {/* Right Column - Paragraph 3 and Red Box */}
+          <div className="space-y-6">
+            {/* Paragraph 3 */}
+            <div className="bg-white rounded-lg p-8 border border-gray-200 shadow-md hover:shadow-lg transition-shadow">
+              <p className="text-gray-700 leading-relaxed text-lg">
+                Our legacy includes establishing the first Tamil cultural center in Kuala Lumpur, launching scholarship programs that have benefited over 2,000 students, and creating a network of support that spans generations.
+              </p>
             </div>
 
-            <button className="w-full px-6 py-3 bg-[#CE0000] text-white rounded-lg font-semibold hover:bg-[#b20000] transition-colors shadow-lg">
-              Our Story
-            </button>
+            {/* Red Box Stats */}
+            <div className="bg-[#CE0000] rounded-lg p-12 shadow-lg">
+              <p className="text-white leading-relaxed text-lg font-medium">
+                From 50 founding members in 1958 to over 5,000 families today – our growth reflects the trust our community places in MCC's leadership.
+              </p>
+            </div>
           </div>
         </div>
       </div>

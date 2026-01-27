@@ -7,52 +7,124 @@ import { MapPin, Building2, ChevronRight } from "lucide-react"
 
 const branches = [
   {
-    state: "Selangor",
-    branches: 15,
-    members: 2500,
-    districts: ["Kuala Lumpur", "Petaling Jaya", "Shah Alam", "Subang"],
-    headquarters: "Kuala Lumpur",
-    established: 1965,
+    state: "Andalas",
+    branches: 1,
+    members: 180,
+    districts: ["Sungai Petani", "Kuala Ketil"],
+    headquarters: "Sungai Petani",
+    established: 1982,
   },
   {
-    state: "Kuala Lumpur",
-    branches: 8,
-    members: 1800,
-    districts: ["Cheras", "Setapak", "Wangsa Maju", "Ampang"],
+    state: "Batu Caves",
+    branches: 1,
+    members: 220,
+    districts: ["Batu Caves", "Gombak"],
+    headquarters: "Batu Caves",
+    established: 1978,
+  },
+  {
+    state: "Brickfields",
+    branches: 1,
+    members: 200,
+    districts: ["Brickfields", "Sentosa"],
+    headquarters: "Brickfields",
+    established: 1975,
+  },
+  {
+    state: "Cheras",
+    branches: 1,
+    members: 210,
+    districts: ["Cheras", "Setapak"],
     headquarters: "Cheras",
-    established: 1960,
+    established: 1977,
+  },
+  {
+    state: "Damansara",
+    branches: 1,
+    members: 250,
+    districts: ["Petaling Jaya", "Damansara"],
+    headquarters: "Damansara",
+    established: 1980,
+  },
+  {
+    state: "Jalan Kelang Lama",
+    branches: 1,
+    members: 190,
+    districts: ["Kuala Lumpur", "Old Klang Road"],
+    headquarters: "Jalan Kelang Lama",
+    established: 1976,
+  },
+  {
+    state: "Klang",
+    branches: 1,
+    members: 240,
+    districts: ["Klang", "Bukit Rajah"],
+    headquarters: "Klang",
+    established: 1979,
+  },
+  {
+    state: "Mt. Kiara",
+    branches: 1,
+    members: 270,
+    districts: ["Mont Kiara", "Segambut"],
+    headquarters: "Mont Kiara",
+    established: 1985,
   },
   {
     state: "Penang",
-    branches: 6,
-    members: 1200,
-    districts: ["Georgetown", "Butterworth", "Taiping"],
+    branches: 1,
+    members: 300,
+    districts: ["Georgetown", "Butterworth"],
     headquarters: "Georgetown",
     established: 1968,
   },
   {
-    state: "Johor",
-    branches: 5,
-    members: 900,
-    districts: ["Johor Bahru", "Kluang", "Muar"],
-    headquarters: "Johor Bahru",
-    established: 1970,
+    state: "PJ North",
+    branches: 1,
+    members: 260,
+    districts: ["Petaling Jaya", "Subang"],
+    headquarters: "PJ North",
+    established: 1981,
   },
   {
-    state: "Perak",
-    branches: 4,
-    members: 700,
-    districts: ["Ipoh", "Taiping", "Klang"],
-    headquarters: "Ipoh",
-    established: 1972,
+    state: "Pudu",
+    branches: 1,
+    members: 210,
+    districts: ["Pudu", "Cheras"],
+    headquarters: "Pudu",
+    established: 1974,
   },
   {
-    state: "Negeri Sembilan",
-    branches: 3,
-    members: 500,
+    state: "Sentul",
+    branches: 1,
+    members: 195,
+    districts: ["Sentul", "Wangsa Maju"],
+    headquarters: "Sentul",
+    established: 1980,
+  },
+  {
+    state: "Seremban",
+    branches: 1,
+    members: 180,
     districts: ["Seremban", "Kuala Lumpur"],
     headquarters: "Seremban",
     established: 1975,
+  },
+  {
+    state: "Taman Yarl",
+    branches: 1,
+    members: 170,
+    districts: ["Taman Yarl", "Ampang"],
+    headquarters: "Taman Yarl",
+    established: 1979,
+  },
+  {
+    state: "Ampang",
+    branches: 1,
+    members: 185,
+    districts: ["Ampang", "Wangsa Maju"],
+    headquarters: "Ampang",
+    established: 1983,
   },
 ]
 
@@ -132,7 +204,7 @@ export default function BranchesPage() {
           </div>
 
           {/* Summary Stats Section */}
-          <div className="mt-16 sm:mt-20 bg-gradient-to-r from-red-50 to-blue-50 rounded-lg border-2 border-red-700 p-8 sm:p-12">
+          {/* <div className="mt-16 sm:mt-20 bg-gradient-to-r from-red-50 to-blue-50 rounded-lg border-2 border-red-700 p-8 sm:p-12">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
               <div className="space-y-2">
                 <p className="text-4xl sm:text-5xl font-black text-red-700">
@@ -151,7 +223,7 @@ export default function BranchesPage() {
                 <p className="text-sm font-bold text-gray-600 uppercase tracking-wide">States Represented</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
