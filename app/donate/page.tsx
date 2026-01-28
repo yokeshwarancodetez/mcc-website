@@ -1,26 +1,29 @@
 "use client"
 
 import { useState } from "react"
-import { Heart } from "lucide-react"
+import { Heart, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
+
+/* ---------------- COUNTRY DATA WITH ISO FOR FLAGS ---------------- */
 
 const countryCodes = [
-  { code: "+60", country: "Malaysia" },
-  { code: "+65", country: "Singapore" },
-  { code: "+91", country: "India" },
-  { code: "+44", country: "United Kingdom" },
-  { code: "+1", country: "United States" },
-  { code: "+61", country: "Australia" },
-  { code: "+64", country: "New Zealand" },
-  { code: "+1", country: "Canada" },
-  { code: "+33", country: "France" },
-  { code: "+49", country: "Germany" },
-  { code: "+39", country: "Italy" },
-  { code: "+34", country: "Spain" },
-  { code: "+31", country: "Netherlands" },
-  { code: "+46", country: "Sweden" },
-  { code: "+886", country: "Taiwan" },
-  { code: "+852", country: "Hong Kong" },
+  { code: "+60", country: "Malaysia", iso: "my" },
+  { code: "+65", country: "Singapore", iso: "sg" },
+  { code: "+91", country: "India", iso: "in" },
+  { code: "+44", country: "United Kingdom", iso: "gb" },
+  { code: "+1", country: "United States", iso: "us" },
+  { code: "+1", country: "Canada", iso: "ca" },
+  { code: "+61", country: "Australia", iso: "au" },
+  { code: "+64", country: "New Zealand", iso: "nz" },
+  { code: "+33", country: "France", iso: "fr" },
+  { code: "+49", country: "Germany", iso: "de" },
+  { code: "+39", country: "Italy", iso: "it" },
+  { code: "+34", country: "Spain", iso: "es" },
+  { code: "+31", country: "Netherlands", iso: "nl" },
+  { code: "+46", country: "Sweden", iso: "se" },
+  { code: "+886", country: "Taiwan", iso: "tw" },
+  { code: "+852", country: "Hong Kong", iso: "hk" },
 ]
 
 const currencies = [
@@ -44,6 +47,8 @@ const donationNeeds = [
   { id: 6, title: "General Fund", description: "Support all MCC initiatives", icon: "💝" },
 ]
 
+/* ---------------- COMPONENT ---------------- */
+
 export default function DonatePage() {
   const [formData, setFormData] = useState({
     fullName: "",
@@ -57,6 +62,10 @@ export default function DonatePage() {
 
   const [selectedNeeds, setSelectedNeeds] = useState<number[]>([])
   const [submitted, setSubmitted] = useState(false)
+  const [open, setOpen] = useState(false)
+
+  const selectedCountry =
+    countryCodes.find((c) => c.code === formData.countryCode) || countryCodes[0]
 
   const handleInputChange = (e: any) => {
     const { name, value } = e.target
@@ -80,7 +89,9 @@ export default function DonatePage() {
     <main className="min-h-screen bg-gradient-to-b from-white via-blue-50 to-white py-14">
       {/* Header */}
       <div className="max-w-5xl mx-auto px-4 mb-10 text-center">
-        <Link href="/" className="inline-block text-red-700 font-semibold mb-6">← Back to Home</Link>
+        <Link href="/" className="inline-block text-red-700 font-semibold mb-6">
+          ← Back to Home
+        </Link>
 
         <div className="flex justify-center mb-5">
           <div className="w-16 h-16 bg-red-700/10 rounded-full flex items-center justify-center">
@@ -88,7 +99,9 @@ export default function DonatePage() {
           </div>
         </div>
 
-        <h1 className="text-4xl font-extrabold text-gray-900 mb-3">Support Our Mission</h1>
+        <h1 className="text-4xl font-extrabold text-gray-900 mb-3">
+          Support Our Mission
+        </h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Your contribution empowers education, healthcare, welfare, and cultural preservation initiatives.
         </p>
@@ -96,8 +109,10 @@ export default function DonatePage() {
 
       {/* Form */}
       <div className="max-w-5xl mx-auto px-4">
-        <form onSubmit={handleSubmit} className="bg-white border-2 border-red-700/20 rounded-2xl p-8 shadow-xl">
-
+        <form
+          onSubmit={handleSubmit}
+          className="bg-white border-2 border-red-700/20 rounded-2xl p-8 shadow-xl"
+        >
           {/* Personal Info */}
           <div className="mb-10">
             <h2 className="text-xl font-bold text-red-700 mb-5">Personal Information</h2>
@@ -113,21 +128,55 @@ export default function DonatePage() {
                 className="input"
               />
 
-              {/* Mobile */}
-              <div className="flex gap-3 md:col-span-2">
-                <select
-                  name="countryCode"
-                  value={formData.countryCode}
-                  onChange={handleInputChange}
-                  className="input w-32"
+              {/* PHONE WITH FLAG DROPDOWN */}
+              <div className="flex gap-3 md:col-span-2 relative">
+                {/* Selector */}
+                <button
+                  type="button"
+                  onClick={() => setOpen(!open)}
+                  className="input w-44 flex items-center justify-between gap-2"
                 >
-                  {countryCodes.map((c, i) => (
-                    <option key={c.code + c.country + i} value={c.code}>
-                      {c.code} ({c.country})
-                    </option>
-                  ))}
-                </select>
+                  <span className="flex items-center gap-2">
+                    <Image
+                      src={`https://flagcdn.com/w40/${selectedCountry.iso}.png`}
+                      alt={selectedCountry.country}
+                      width={26}
+                      height={18}
+                      className="rounded-sm"
+                    />
+                    <span className="font-semibold">{selectedCountry.code}</span>
+                  </span>
+                  <ChevronDown size={18} />
+                </button>
 
+                {/* Dropdown */}
+                {open && (
+                  <div className="absolute top-14 left-0 w-72 max-h-72 overflow-y-auto bg-white border rounded-xl shadow-xl z-50">
+                    {countryCodes.map((c, i) => (
+                      <button
+                        type="button"
+                        key={c.iso + i}
+                        onClick={() => {
+                          setFormData((prev) => ({ ...prev, countryCode: c.code }))
+                          setOpen(false)
+                        }}
+                        className="w-full px-4 py-3 flex items-center gap-3 hover:bg-red-50 text-left"
+                      >
+                        <Image
+                          src={`https://flagcdn.com/w40/${c.iso}.png`}
+                          alt={c.country}
+                          width={28}
+                          height={20}
+                          className="rounded-sm"
+                        />
+                        <span className="font-semibold">{c.code}</span>
+                        <span className="text-gray-600 text-sm">{c.country}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* Mobile input */}
                 <input
                   type="tel"
                   name="phoneNumber"
@@ -139,7 +188,6 @@ export default function DonatePage() {
                 />
               </div>
 
-              {/* Email BELOW mobile */}
               <input
                 type="email"
                 name="email"
@@ -164,7 +212,9 @@ export default function DonatePage() {
                 className="input w-32"
               >
                 {currencies.map((c) => (
-                  <option key={c.code} value={c.code}>{c.symbol}</option>
+                  <option key={c.code} value={c.code}>
+                    {c.symbol}
+                  </option>
                 ))}
               </select>
 
@@ -191,7 +241,9 @@ export default function DonatePage() {
                       : "border-gray-300 hover:border-red-400"
                   }`}
                 >
-                  <h3 className="font-bold">{need.icon} {need.title}</h3>
+                  <h3 className="font-bold">
+                    {need.icon} {need.title}
+                  </h3>
                   <p className="text-sm text-gray-600">{need.description}</p>
                 </button>
               ))}

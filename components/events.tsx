@@ -34,7 +34,7 @@ export default function Events() {
     {
       title: "Pongal Villa 2026",
       date: "25-01-2026",
-      time: "9:00 AM",
+      time: "Morning Session",
       location: "Malaysia",
       description:
         "Enjoy Bharatanatyam performances, folk dances, live music, traditional food stalls and family-friendly cultural programs.",
@@ -44,7 +44,7 @@ export default function Events() {
     {
       title: "Pongal Villa 2026",
       date: "25-01-2026",
-      time: "9:00 AM",
+      time: "Morning Session",
       location: "Malaysia",
       description:
         "Women-focused Pongal activities including debates, cultural competitions, leadership games and team-building sessions.",
