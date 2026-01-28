@@ -411,46 +411,67 @@ export default function MemberRegistrationForm() {
             Membership Type<span className="text-[#CE0000]">*</span>
           </label>
           <div className="space-y-3">
-            <div
-              className="border border-gray-300 rounded-lg p-4 hover:border-[#CE0000] cursor-pointer"
-              onClick={() => setFormData((prev) => ({ ...prev, membershipType: "associate" }))}
-            >
-              <div className="flex items-start">
-                <input
-                  type="radio"
-                  name="membershipType"
-                  value="associate"
-                  checked={formData.membershipType === "associate"}
-                  onChange={handleChange}
-                  className="mt-1 mr-3"
-                />
-                <div className="flex-1">
-                  <label className="font-bold text-[#003087] cursor-pointer">Associate Member</label>
-                  <p className="text-sm text-gray-600">Fee: RM 50 | Duration: 5 Years (Fixed)</p>
-                </div>
-              </div>
-            </div>
+  <div
+    className="border border-gray-300 rounded-lg p-4 hover:border-[#CE0000] cursor-pointer"
+    onClick={() => setFormData((prev) => ({ ...prev, membershipType: "associate" }))}
+  >
+    <div className="flex items-start">
+      <input
+        type="radio"
+        name="membershipType"
+        value="associate"
+        checked={formData.membershipType === "associate"}
+        onChange={handleChange}
+        className="mt-1 mr-3"
+      />
+      <div className="flex-1">
+        <label className="font-bold text-[#003087] cursor-pointer">Associate Member</label>
+        <p className="text-sm text-gray-600">Fee: RM 50 | Duration: 5 Years (Fixed)</p>
+      </div>
+    </div>
+  </div>
 
-            <div
-              className="border border-gray-300 rounded-lg p-4 hover:border-[#CE0000] cursor-pointer"
-              onClick={() => setFormData((prev) => ({ ...prev, membershipType: "ordinary" }))}
-            >
-              <div className="flex items-start">
-                <input
-                  type="radio"
-                  name="membershipType"
-                  value="ordinary"
-                  checked={formData.membershipType === "ordinary"}
-                  onChange={handleChange}
-                  className="mt-1 mr-3"
-                />
-                <div className="flex-1">
-                  <label className="font-bold text-[#003087] cursor-pointer">Ordinary Member</label>
-                  <p className="text-sm text-gray-600">Fee: RM 10 per year</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <div
+    className="border border-gray-300 rounded-lg p-4 hover:border-[#CE0000] cursor-pointer"
+    onClick={() => setFormData((prev) => ({ ...prev, membershipType: "ordinary" }))}
+  >
+    <div className="flex items-start">
+      <input
+        type="radio"
+        name="membershipType"
+        value="ordinary"
+        checked={formData.membershipType === "ordinary"}
+        onChange={handleChange}
+        className="mt-1 mr-3"
+      />
+      <div className="flex-1">
+        <label className="font-bold text-[#003087] cursor-pointer">Ordinary Member</label>
+        <p className="text-sm text-gray-600">Fee: RM 10 per year</p>
+      </div>
+    </div>
+  </div>
+
+  <div
+    className="border border-gray-300 rounded-lg p-4 hover:border-[#CE0000] cursor-pointer"
+    onClick={() => setFormData((prev) => ({ ...prev, membershipType: "lifetime" }))}
+  >
+    <div className="flex items-start">
+      <input
+        type="radio"
+        name="membershipType"
+        value="lifetime"
+        checked={formData.membershipType === "lifetime"}
+        onChange={handleChange}
+        className="mt-1 mr-3"
+      />
+      <div className="flex-1">
+        <label className="font-bold text-[#003087] cursor-pointer">Lifetime Member</label>
+        <p className="text-sm text-gray-600">Fee: RM 100 | Duration: Lifetime (Fixed)</p>
+      </div>
+    </div>
+  </div>
+</div>
+
         </div>
       </section>
 
@@ -519,20 +540,21 @@ export default function MemberRegistrationForm() {
       </section>
 
       {/* Submit Button */}
-      <div className="flex gap-4">
-        <button
-          type="submit"
-          className="flex-1 px-6 py-3 bg-[#CE0000] text-white rounded-lg font-bold hover:bg-[#B00000] transition-colors text-center"
-        >
-          Submit Registration
-        </button>
-        <button
-          type="reset"
-          className="flex-1 px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-bold hover:bg-gray-400 transition-colors text-center"
-        >
-          Clear Form
-        </button>
-      </div>
+     <div className="flex gap-4 justify-end">
+  <button
+    type="reset"
+    className="px-6 py-3 bg-gray-300 text-gray-700 rounded-lg font-bold hover:bg-gray-400 transition-colors text-center"
+  >
+    Clear Form
+  </button>
+  <button
+    type="submit"
+    className="px-6 py-3 bg-[#CE0000] text-white rounded-lg font-bold hover:bg-[#B00000] transition-colors text-center"
+  >
+    Submit Registration
+  </button>
+</div>
+
     </form>
   )
 }

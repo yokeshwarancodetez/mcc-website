@@ -11,7 +11,7 @@ export default function AboutNavigation() {
 
   const aboutItems = [
     { label: "About Us", href: "/about" },
-    { label: "Details About Founders", href: "/about/founders" },
+    { label: "Details About Founders", href: "/about/founder" },
     { label: "Life and History of Our Leaders", href: "/about/leaders" },
     { label: "Constitution", href: "/about/constitution" },
   ]

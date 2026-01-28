@@ -2111,7 +2111,7 @@ export default async function BranchSectionPage({ params }: { params: Promise<{ 
     <main className="flex flex-col w-full">
       <Header />
 
-      <section className="bg-gradient-to-r from-[#CE0000] to-[#003087] text-white py-8 sm:py-12">
+      <section className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-8 sm:py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold capitalize">
             {state} - {currentContent?.title}

@@ -155,14 +155,15 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row justify-between gap-6">
               <p className="font-medium">&copy; 2026 Malaysian Ceylonese Congress. All rights reserved.</p>
               <div className="flex items-center gap-3">
-              <span className="text-xs">Website Designed by CodeTez Technologies</span>
-              <Image
-                src="/myown-logo.png"
-                alt="CodeTez Technologies"
-                width={90}
-                height={40}
-                className="object-contain"
-              />
+              <span className="text-xs">Website Designed by CodeTez</span>
+             <Image
+  src="/myown-logo.png"
+  alt="CodeTez Technologies"
+  width={60}
+  height={28}
+  className="object-contain opacity-90 hover:opacity-100 transition"
+ />
+
             </div>
               <div className="flex gap-6 flex-wsrap">
                 <Link

@@ -16,7 +16,7 @@ const branches = [
   },
   {
     state: "Batu Caves",
-    branches: 1,
+    branches: 2,
     members: 220,
     districts: ["Batu Caves", "Gombak"],
     headquarters: "Batu Caves",
@@ -24,7 +24,7 @@ const branches = [
   },
   {
     state: "Brickfields",
-    branches: 1,
+    branches: 3,
     members: 200,
     districts: ["Brickfields", "Sentosa"],
     headquarters: "Brickfields",
@@ -32,7 +32,7 @@ const branches = [
   },
   {
     state: "Cheras",
-    branches: 1,
+    branches: 4,
     members: 210,
     districts: ["Cheras", "Setapak"],
     headquarters: "Cheras",
@@ -40,7 +40,7 @@ const branches = [
   },
   {
     state: "Damansara",
-    branches: 1,
+    branches: 5,
     members: 250,
     districts: ["Petaling Jaya", "Damansara"],
     headquarters: "Damansara",
@@ -48,7 +48,7 @@ const branches = [
   },
   {
     state: "Jalan Kelang Lama",
-    branches: 1,
+    branches: 6,
     members: 190,
     districts: ["Kuala Lumpur", "Old Klang Road"],
     headquarters: "Jalan Kelang Lama",
@@ -56,7 +56,7 @@ const branches = [
   },
   {
     state: "Klang",
-    branches: 1,
+    branches: 7,
     members: 240,
     districts: ["Klang", "Bukit Rajah"],
     headquarters: "Klang",
@@ -64,7 +64,7 @@ const branches = [
   },
   {
     state: "Mt. Kiara",
-    branches: 1,
+    branches: 8,
     members: 270,
     districts: ["Mont Kiara", "Segambut"],
     headquarters: "Mont Kiara",
@@ -72,7 +72,7 @@ const branches = [
   },
   {
     state: "Penang",
-    branches: 1,
+    branches: 9,
     members: 300,
     districts: ["Georgetown", "Butterworth"],
     headquarters: "Georgetown",
@@ -80,7 +80,7 @@ const branches = [
   },
   {
     state: "PJ North",
-    branches: 1,
+    branches: 10,
     members: 260,
     districts: ["Petaling Jaya", "Subang"],
     headquarters: "PJ North",
@@ -88,7 +88,7 @@ const branches = [
   },
   {
     state: "Pudu",
-    branches: 1,
+    branches: 11,
     members: 210,
     districts: ["Pudu", "Cheras"],
     headquarters: "Pudu",
@@ -96,7 +96,7 @@ const branches = [
   },
   {
     state: "Sentul",
-    branches: 1,
+    branches: 12,
     members: 195,
     districts: ["Sentul", "Wangsa Maju"],
     headquarters: "Sentul",
@@ -104,7 +104,7 @@ const branches = [
   },
   {
     state: "Seremban",
-    branches: 1,
+    branches: 13,
     members: 180,
     districts: ["Seremban", "Kuala Lumpur"],
     headquarters: "Seremban",
@@ -112,7 +112,7 @@ const branches = [
   },
   {
     state: "Taman Yarl",
-    branches: 1,
+    branches: 14,
     members: 170,
     districts: ["Taman Yarl", "Ampang"],
     headquarters: "Taman Yarl",
@@ -120,7 +120,7 @@ const branches = [
   },
   {
     state: "Ampang",
-    branches: 1,
+    branches: 15,
     members: 185,
     districts: ["Ampang", "Wangsa Maju"],
     headquarters: "Ampang",
@@ -133,7 +133,7 @@ export default function BranchesPage() {
     <main className="flex flex-col w-full">
       <Header />
 
-      <section className="bg-gradient-to-r from-red-700 via-blue-900 to-red-700 text-white py-16 sm:py-20 lg:py-24">
+      <section className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-16 sm:py-6 lg:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-4">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white text-balance uppercase tracking-tight">
@@ -164,7 +164,7 @@ export default function BranchesPage() {
                   {/* Key Stats */}
                   <div className="grid grid-cols-2 gap-4">
                     <div className="bg-red-50 rounded-lg p-4 border-l-4 border-red-700">
-                      <p className="text-xs font-bold text-gray-600 uppercase tracking-wide">Branches</p>
+                      <p className="text-xs font-bold text-gray-600 uppercase tracking-wide">Branch Code</p>
                       <p className="text-2xl font-black text-red-700 mt-1">{branch.branches}</p>
                     </div>
                     <div className="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-900">
@@ -192,12 +192,14 @@ export default function BranchesPage() {
                   </div>
 
                   {/* View Details Button */}
-                  <Link href={`/branches/${branch.state.toLowerCase().replace(/\s+/g, "-")}`}>
-                    <button className="w-full mt-6 px-4 py-3 bg-gradient-to-r from-red-700 to-blue-900 text-white rounded-lg hover:shadow-lg transition-all font-bold uppercase tracking-wide flex items-center justify-center gap-2 text-sm">
-                      View Details
-                      <ChevronRight size={16} />
-                    </button>
-                  </Link>
+     <Link href={`/branches/${branch.state.toLowerCase().replace(/\s+/g, "-")}`}>
+  <button className="w-full mt-6 px-4 py-3 bg-white text-[#003087] rounded-lg hover:shadow-lg transition-all font-bold uppercase tracking-wide flex items-center justify-center gap-2 text-sm">
+    View Details
+    <ChevronRight size={16} />
+  </button>
+</Link>
+
+
                 </div>
               </div>
             ))}

@@ -60,9 +60,9 @@ export default function Hero() {
       onTouchEnd={handleTouchEnd}
       className="
         relative w-full 
-        min-h-[78vh] sm:min-h-[75vh] lg:min-h-[85vh] 
+        min-h-[68vh] sm:min-h-[75vh] lg:min-h-[85vh] 
         flex items-center overflow-hidden
-        bg-black
+        bg-transparent sm:bg-black
       "
     >
       {/* Background Image */}
@@ -74,14 +74,16 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-10 w-full flex items-center justify-center lg:justify-start">
-        <div className="w-full lg:w-1/2 text-center lg:text-left pt-16 sm:pt-0">
+        <div className="w-full lg:w-1/2 text-center lg:text-left pt-4 sm:pt-0">
 
-          <div className="
-            bg-transparent sm:bg-gradient-to-br sm:from-black/60 sm:via-black/30 sm:to-transparent 
-            rounded-xl sm:rounded-2xl 
-            p-4 sm:p-7 lg:p-9 
-            max-w-xl mx-auto lg:mx-0
-          ">
+          <div
+            className="
+              bg-transparent sm:bg-gradient-to-br sm:from-black/60 sm:via-black/30 sm:to-transparent 
+              rounded-xl sm:rounded-2xl 
+              p-4 sm:p-7 lg:p-9 
+              max-w-xl mx-auto lg:mx-0
+            "
+          >
             <h1 className="text-lg sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug sm:leading-tight drop-shadow-xl">
               {slides[current].heading}
             </h1>
@@ -92,7 +94,8 @@ export default function Hero() {
 
             <div className="mt-4 sm:mt-5 w-12 sm:w-24 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-full mx-auto lg:mx-0"></div>
 
-            <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
+            {/* Buttons hidden on mobile */}
+            <div className="hidden sm:flex mt-4 sm:mt-6 flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
               <button className="px-4 py-2 sm:px-9 sm:py-3.5 bg-gradient-to-r from-red-700 to-blue-900 text-white font-semibold sm:font-bold rounded-md sm:rounded-lg hover:scale-105 transition uppercase tracking-wide text-[11px] sm:text-base shadow-lg">
                 {slides[current].buttonText}
               </button>

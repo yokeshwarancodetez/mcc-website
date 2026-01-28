@@ -30,7 +30,7 @@ To date, six (6) presidents have held office since 1958:
 • Datuk Dr. D. M. Thuraiapah (1996–2003)  
 • Dato' Dr. N. K. S. Tharmaseelan (2004–Present)`,
   years: "1958 – 1969 • Founder President",
-  image: "/1 founder image.jpeg",
+  image: "/founder-image.png",
 },
 
   {

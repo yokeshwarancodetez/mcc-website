@@ -1,74 +1,95 @@
 export default function AboutPage() {
   return (
     <div className="bg-white">
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-12 md:py-16 lg:py-20">
+      {/* ✅ Hero Section (Reduced Size) */}
+      <div className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-6 md:py-8">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium mb-4">About MCC</h1>
-          <p className="text-lg md:text-xl text-gray-100">
+          <h1 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-2">
+            About MCC
+          </h1>
+          <p className="text-sm md:text-base lg:text-lg text-gray-100">
             Footprints of Seva - Over 60 Years of Community Leadership
           </p>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-12 md:py-16">
-        <div className="max-w-4xl mx-auto">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-10 md:py-16">
 
-          {/* About the Party */}
-          <div className="mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-[#003087] mb-8">About the Party</h2>
-            <div className="space-y-6 bg-white border-l-4 border-[#CE0000] p-8 rounded-lg">
+        {/* About the Party */}
+        <div className="mb-20">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#003087] mb-10 text-center">
+            About the Party
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-white border-l-4 border-[#CE0000] p-6 md:p-10 rounded-xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                The Malaysian Ceylonese Congress (MCC) is a political party in Malaysia formed in 1958, established as a political party with the aim of giving support to the then Alliance party. MCC has continuously supported the Barisan National.
+                The Malaysian Ceylonese Congress (MCC) is a political party in Malaysia formed in 1958, established with the aim of giving support to the then Alliance Party. Since its inception, MCC has continuously supported Barisan Nasional while serving as the political voice of Malaysians of Ceylonese origin.
               </p>
+            </div>
 
+            <div className="bg-white border-l-4 border-[#003087] p-6 md:p-10 rounded-xl shadow-sm hover:shadow-lg transition">
               <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-                MCC was the brainchild of the late Mr. M.W Navaratnam and was formed to promote and preserve the Political, Educational, Economical, Social and Cultural aspects of the Malaysians of Ceylonese origin, or Sri Lankan, descent.
+                MCC was the brainchild of the late Mr. M.W. Navaratnam and was founded to promote and preserve the political, educational, economic, social and cultural interests of Malaysians of Sri Lankan descent, ensuring dignity, representation, and progress for future generations.
               </p>
             </div>
           </div>
+        </div>
 
-          {/* Our Story */}
-          <h2 className="text-2xl md:text-3xl font-bold text-[#003087] mb-8">Our Story</h2>
-          <div className="space-y-6 mb-16">
-            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              Founded in 1958, the Malaysian Ceylonese Congress has been the cornerstone of the Sri Lankan Tamil community in Malaysia for over six decades. Our journey began with a vision to preserve our cultural heritage while fostering integration into Malaysian society.
-            </p>
+        {/* Our Story */}
+        <div className="mb-24">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#003087] mb-10 text-center">
+            Our Story
+          </h2>
 
-            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              From humble beginnings with just 50 founding members, MCC has grown into a vibrant organization representing thousands of families across Malaysia. We have weathered political changes, economic challenges, and social transformations while maintaining our commitment to seva (service).
-            </p>
+          <div className="grid md:grid-cols-3 gap-8">
 
-            <p className="text-gray-700 leading-relaxed text-base md:text-lg">
-              Our legacy includes establishing the first Tamil cultural center in Kuala Lumpur, launching scholarship programs that have benefited over 2,000 students, and creating a network of support that spans generations.
-            </p>
+            <div className="bg-white border-l-4 border-[#003087] p-6 md:p-10 rounded-xl shadow-sm hover:shadow-lg transition">
+              <h3 className="text-lg font-semibold text-[#003087] mb-3">Our Beginning</h3>
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                Founded in 1958, MCC emerged as a unifying force for the Sri Lankan Tamil community in Malaysia, rooted in a vision to preserve heritage while building strong civic participation in a growing nation.
+              </p>
+            </div>
+
+            <div className="bg-white border-l-4 border-[#CE0000] p-6 md:p-10 rounded-xl shadow-sm hover:shadow-lg transition">
+              <h3 className="text-lg font-semibold text-[#CE0000] mb-3">Our Growth</h3>
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                From just 50 founding members, MCC expanded into a nationwide organisation representing thousands of families, overcoming political shifts and social changes while remaining anchored in service.
+              </p>
+            </div>
+
+            <div className="bg-white border-l-4 border-[#003087] p-6 md:p-10 rounded-xl shadow-sm hover:shadow-lg transition">
+              <h3 className="text-lg font-semibold text-[#003087] mb-3">Our Legacy</h3>
+              <p className="text-gray-700 leading-relaxed text-base md:text-lg">
+                MCC’s legacy includes cultural institutions, scholarship programmes supporting over 2,000 students, and intergenerational leadership networks dedicated to education, unity, and empowerment.
+              </p>
+            </div>
+
           </div>
         </div>
 
-        {/* ✅ Vision & Mission Side by Side */}
-        <div className="mt-16 grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        {/* Vision & Mission */}
+        <div className="mt-10 grid md:grid-cols-2 gap-8">
 
-          {/* Our Vision */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#003087] mb-6 text-center md:text-left">
               Our Vision
             </h2>
-            <div className="bg-gradient-to-r from-[#003087] to-[#001f52] text-white p-8 rounded-xl shadow-lg h-full">
-              <p className="text-lg leading-relaxed">
-                To be the leading political and community organization representing Malaysians of Ceylonese origin, advancing the political, educational, social, and cultural interests of our community while contributing to Malaysia's unity, prosperity, and progress as a multiethnic nation.
+            <div className="bg-gradient-to-r from-[#003087] to-[#001f52] text-white p-8 md:p-10 rounded-xl shadow-lg h-full">
+              <p className="text-base md:text-lg leading-relaxed">
+                To be the leading political and community organization representing Malaysians of Ceylonese origin, advancing political, educational, social, and cultural interests while contributing to Malaysia’s unity and progress.
               </p>
             </div>
           </div>
 
-          {/* Our Mission */}
           <div>
             <h2 className="text-2xl md:text-3xl font-bold text-[#003087] mb-6 text-center md:text-left">
               Our Mission
             </h2>
-            <div className="bg-gradient-to-r from-[#CE0000] to-[#B00000] text-white p-8 rounded-xl shadow-lg h-full">
-              <p className="text-lg leading-relaxed">
-                To uphold the Constitution and promote the political, educational, social and cultural interests of Malaysians of Ceylonese origin, fostering unity, service, and excellence within our community and the nation while empowering through education, cultural preservation, social welfare, and civic participation.
+            <div className="bg-gradient-to-r from-[#CE0000] to-[#B00000] text-white p-8 md:p-10 rounded-xl shadow-lg h-full">
+              <p className="text-base md:text-lg leading-relaxed">
+                To uphold the Constitution and empower the community through education, cultural preservation, social welfare, and civic participation, fostering unity, service, and excellence.
               </p>
             </div>
           </div>
@@ -81,7 +102,7 @@ export default function AboutPage() {
             Our Core Values
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-[#CE0000]/5 border-l-4 border-[#CE0000] p-6 rounded-lg hover:shadow-lg transition-shadow">
               <h3 className="text-xl font-bold text-[#CE0000] mb-3">Integrity</h3>
               <p className="text-gray-700">Transparent and accountable leadership in every endeavour.</p>
