@@ -42,9 +42,9 @@ export default function CallToAction() {
             <div className="text-5xl">💝</div>
             <h3 className="text-2xl font-bold text-white">Donate</h3>
             <p className="text-white/80">Support our community initiatives and programs</p>
-            <button className="inline-flex items-center gap-2 mt-4 text-white font-semibold group-hover:gap-3 transition-all">
+              <Link href="/donate" className="inline-flex items-center gap-2 mt-4 text-white font-semibold group-hover:gap-3 transition-all">
               Contribute <ArrowRight size={20} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

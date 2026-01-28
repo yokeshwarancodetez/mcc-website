@@ -1,38 +1,44 @@
 "use client"
 
 export default function Organization() {
-  const departments = [
-    {
-      image: "/election-committee.jpg",
-      title: "Central Election Committee",
-      description: "Manages electoral processes and campaign coordination",
-      members: 8,
-    },
-    {
-      image: "/office-bearers.jpg",
-      title: "National Office Bearers",
-      description: "Core leadership team driving organizational initiatives",
-      members: 5,
-    },
-    {
-      image: "/state-chairmen.jpg",
-      title: "State Chairmen",
-      description: "Regional leadership ensuring statewide community engagement",
-      members: 13,
-    },
-    {
-      image: "/national-executive.jpg",
-      title: "National Executive",
-      description: "Strategic decision-making and policy implementation",
-      members: 25,
-    },
-    {
-      image: "/special-departments.jpg",
-      title: "Special Departments",
-      description: "Focused initiatives including Youth, Education, and Welfare",
-      members: "Multiple",
-    },
-  ]
+const departments = [
+  {
+    image: "/Central Election Committee.png",
+    title: "Central Election Committee",
+    description: "Manages electoral processes and campaign coordination",
+    members: 8,
+  },
+  {
+    image: "/central working committee.png",
+    title: "Central Working Committee",
+    description: "Supervises national operations, coordinates between departments, and ensures execution of MCC policies and resolutions.",
+    members: 15,
+  },
+  {
+    image: "/National Office Bearers.png",
+    title: "National Office Bearers",
+    description: "Core leadership team driving organizational initiatives",
+    members: 5,
+  },
+  {
+    image: "/State chairmans.png",
+    title: "State Chairmen",
+    description: "Regional leadership ensuring statewide community engagement",
+    members: 13,
+  },
+  {
+    image: "/National Executives.png",
+    title: "National Executive",
+    description: "Strategic decision-making and policy implementation",
+    members: 25,
+  },
+  {
+    image: "/Special Departments.png",
+    title: "Special Departments",
+    description: "Focused initiatives including Youth, Education, and Welfare",
+    members: "Multiple",
+  },
+]
 
   return (
     <section className="w-full py-16 bg-gradient-to-r from-[#003087]/5 to-[#CE0000]/5">

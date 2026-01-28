@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Facebook, Twitter, Youtube, Instagram, Phone, Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
@@ -45,7 +46,7 @@ export default function Footer() {
               
               <div className="flex items-center gap-3 text-sm text-gray-300">
                 <Mail size={16} className="text-amber-400 flex-shrink-0" />
-                <span className="font-medium">info@mcc1998.com</span>
+                <span className="font-medium">info@mcc1958.com</span>
               </div>
               <div className="flex items-start gap-3 text-sm text-gray-300">
                 <MapPin size={16} className="text-amber-400 flex-shrink-0 mt-0.5" />
@@ -153,9 +154,16 @@ export default function Footer() {
           <div className="border-t border-gray-700 pt-8 space-y-4 text-sm text-gray-400">
             <div className="flex flex-col md:flex-row justify-between gap-6">
               <p className="font-medium">&copy; 2026 Malaysian Ceylonese Congress. All rights reserved.</p>
-              <p className="text-xs text-gray-400 font-medium">
-    Created by <span className="text-gray-400 font-medium">CodeTez Technologies</span>
-  </p>
+              <div className="flex items-center gap-3">
+              <span className="text-xs">Website Designed by CodeTez Technologies</span>
+              <Image
+                src="/myown-logo.png"
+                alt="CodeTez Technologies"
+                width={90}
+                height={40}
+                className="object-contain"
+              />
+            </div>
               <div className="flex gap-6 flex-wsrap">
                 <Link
                   href="#"

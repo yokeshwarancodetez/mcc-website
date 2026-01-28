@@ -63,7 +63,7 @@ export default function ContactPage() {
                   <span className="font-bold">Phone:</span> +60 3 XXXX XXXX
                 </p> */}
                 <p className="text-sm">
-                  <span className="font-bold">Email:</span> info@mcc1998.com
+                  <span className="font-bold">Email:</span> info@mcc1958.com
                 </p>
               </div>
 

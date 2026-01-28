@@ -4,13 +4,13 @@ export default function Achievements() {
       year: "1958",
       title: "Foundation",
       description: "MCC established as the political voice of Malaysian Ceylonese community",
-      image: "/achievement-foundation.jpg",
+      image: "/founded.png",
     },
     {
       year: "1970s",
       title: "Educational Legacy Begins",
       description: "Launched first scholarship programs supporting 500+ students annually",
-      image: "/achievement-education.jpg",
+      image: "/Educational Legacy Begins.png",
     },
     {
       year: "1990s",
@@ -28,7 +28,7 @@ export default function Achievements() {
       year: "2020s",
       title: "2,000+ Scholarships",
       description: "Milestone achievement in education support for underprivileged youth",
-      image: "/achievement-scholarship.jpg",
+      image: "/2_000 Scholarships.png",
     },
     {
       year: "2025",

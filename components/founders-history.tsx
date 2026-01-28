@@ -14,14 +14,25 @@ interface Founder {
 
 const founders: Founder[] = [
   {
-    id: 1,
-    name: "Mr. M. W. Navaratnam",
-    title: "Founder & President",
-    description:
-      "MCC was the brainchild of the late Mr. M. W. Navaratnam. He officially announced the birth of the Malayan Ceylonese Congress (M.C.C.) on 24th February 1958, laying the foundation for unity and representation of the Malaysian Ceylonese community.",
-    years: "1958 – 1969 • Founder President",
-    image: "/founder-image.png",
-  },
+  id: 1,
+  name: "Mr. M. W. Navaratnam",
+  title: "Founder & President",
+  description: `MCC was established as a political party with the aim of supporting the then Alliance Party and has continuously supported Barisan Nasional.
+
+MCC was the brainchild of the late Mr. M. W. Navaratnam and was formed to promote and preserve the political, educational, economic, social, and cultural interests of Malaysians of Ceylonese (Sri Lankan) origin.
+
+To date, six (6) presidents have held office since 1958:
+
+• Mr. M. W. Navaratnam (1958–1969)  
+• Senator Tan Sri Dr. C. Sinnadurai (1970–1983)  
+• Tan Sri Dato' Seri V. Jeyaratnam (1983–1987)  
+• Dato' Dr. N. Arumugasamy (Neurosurgeon) (1988–1995)  
+• Datuk Dr. D. M. Thuraiapah (1996–2003)  
+• Dato' Dr. N. K. S. Tharmaseelan (2004–Present)`,
+  years: "1958 – 1969 • Founder President",
+  image: "/1 founder image.jpeg",
+},
+
   {
     id: 2,
     name: "Senator Tan Sri Dr. C. Sinnadurai",
@@ -29,7 +40,7 @@ const founders: Founder[] = [
     description:
       "During his presidency, he was appointed to the Senate where he represented MCC. He raised important matters pertaining to the Malaysian Ceylonese community in particular, and minority communities in general, strengthening MCC’s national presence.",
     years: "1970 – 1983 • President",
-    image: "/founder-2.jpeg",
+    image: "/2 founder image.jpeg",
   },
   {
     id: 3,
@@ -38,7 +49,7 @@ const founders: Founder[] = [
     description:
       "He was declared duly elected unopposed as President. His leadership focused on forging unity within the community and working towards achieving the aims and objectives of the organisation.",
     years: "1983 – 1987 • President",
-    image: "/founder-3.jpeg",
+    image: "/3 founder image.jpeg",
   },
   {
     id: 4,
@@ -47,7 +58,7 @@ const founders: Founder[] = [
     description:
       "Dato’ Dr. N. Arumugasamy served as President during this period, continuing MCC’s mission of community leadership and development.",
     years: "1988 – 1995 • President",
-    image: "/founder-4.jpeg",
+    image: "/4 founder image.jpeg",
   },
   {
     id: 5,
@@ -56,17 +67,17 @@ const founders: Founder[] = [
     description:
       "Datuk Dr. D. M. Thuraiapah served as President of the Malaysian Ceylonese Congress, guiding the organisation through continued community service and representation.",
     years: "1996 – 2003 • President",
-    image: "/founder-5.jpeg",
+    image: "/5 founder image.jpeg",
   },
-  {
-    id: 6,
-    name: "Dato’ Dr. NKS Tharmaseelan",
-    title: "President",
-    description:
-      "Dato’ Dr. NKS Tharmaseelan has served as President from 2004 to the present, leading MCC into the modern era with sustained commitment to community development, unity, and progress.",
-    years: "2004 – Present • President",
-    image: "/founder-7.jpeg",
-  },
+  // {
+  //   id: 6,
+  //   name: "Dato’ Dr. NKS Tharmaseelan",
+  //   title: "President",
+  //   description:
+  //     "Dato’ Dr. NKS Tharmaseelan has served as President from 2004 to the present, leading MCC into the modern era with sustained commitment to community development, unity, and progress.",
+  //   years: "2004 – Present • President",
+  //   image: "/founder-7.jpeg",
+  // },
 ]
 
 export default function FoundersHistory() {
