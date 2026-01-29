@@ -66,7 +66,9 @@ export default function MissionValues() {
           <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900">
             Our Mission & Vision
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+
+          {/* ✅ Increased grey font size */}
+          <p className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Eight pillars guiding our mission and vision for the community
           </p>
         </div>
@@ -120,9 +122,10 @@ export default function MissionValues() {
                     >
                       {objective.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed text-sm">
-                      {objective.description}
-                    </p>
+                  <p className="text-gray-600 leading-relaxed text-base sm:text-lg">
+  {objective.description}
+</p>
+
                   </div>
                 </div>
               </div>

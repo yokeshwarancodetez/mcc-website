@@ -50,7 +50,7 @@ export default function Leadership() {
       {/* President Message Header */}
       {/* ===================== */}
       <div className="max-w-7xl mx-auto px-4 py-16">
-        <div className="mb-14 space-y-5 text-center">
+        {/* <div className="mb-14 space-y-5 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[#003087]">
             About The President
           </h2>
@@ -59,12 +59,12 @@ export default function Leadership() {
             Malaysian Ceylonese community—championing unity, education and the
             spirit of seva that defines our heritage."
           </p>
-        </div>
+        </div> */}
 
         {/* ===================== */}
         {/* President Message Card */}
         {/* ===================== */}
-        <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#003087] to-[#001f52] rounded-2xl p-8 md:p-12 shadow-xl border border-[#003087]">
+        {/* <div className="max-w-4xl mx-auto bg-gradient-to-r from-[#003087] to-[#001f52] rounded-2xl p-8 md:p-12 shadow-xl border border-[#003087]">
           <div className="space-y-6 text-white text-base md:text-lg leading-relaxed">
             <p>
               Our organization stands at a critical juncture where the values of
@@ -83,7 +83,7 @@ export default function Leadership() {
               — MCC Leadership
             </p>
           </div>
-        </div>
+        </div> */}
 
         {/* ===================== */}
         {/* Leadership Grid */}

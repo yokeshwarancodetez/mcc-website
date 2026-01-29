@@ -24,6 +24,10 @@ export default function MCCHistory() {
           text: "During this formative period, the community demonstrated remarkable initiative in establishing services for their members. The Jaffnese Co-operative Society (JCS) was established in 1924 to prevent indebtedness and encourage thrift among the Jaffna Tamils. Members were encouraged to invest in the JCS, and loans at reasonable rates were granted for educational expenses, medical treatment, funeral expenses, and purchase of household necessities. Additionally, the Malayan Ceylonese Provident Fund was planned and organized by the Association, becoming tremendously popular among the community. Its phenomenal growth necessitated the Fund being conducted as a separate organization, with Mr. M. W. Navaratnam serving as its president for over 18 years.",
         },
         {
+          subtitle: "Community Welfare and Mutual Aid",
+          text: "Beyond formal associations, the Ceylonese community developed a strong tradition of mutual aid and welfare support. Community members organized collective efforts to support those in need, particularly during times of illness, death, and financial hardship. The establishment of cooperative societies like the Jaffnese Co-operative Society demonstrated the community's commitment to self-help and financial stability. Funeral assistance, education support, and medical aid schemes were organized collectively, embodying the principles of communal responsibility. This culture of mutual support became deeply ingrained in the organizational fabric, with community leaders ensuring that no member faced hardship alone. These welfare initiatives laid the foundation for MCC's later comprehensive social programs and community services.",
+        },
+        {
           subtitle: "Path to Independence",
           text: "In 1955, when the Malaysian deputation under the leadership of Y.T.M. Tunku Abdul Rahman Putra Al Haj left for Britain to seek Independence, the Ceylon Association of Selangor was the first Ceylonese organization to entertain the deputation and pledge their loyalty. On December 9, 1955, the Chief Minister and newly-elected Ceylonese representatives were hosted at a tea party. Mr. Navaratnam expressed confidence in the Chief Minister's mission, saying there was 'no doubt his mission to Britain to obtain Merdeka will be a complete success.' The Chief Minister responded by pledging that there would be a place for everyone in Malaya after Independence.",
         },
@@ -87,7 +91,7 @@ export default function MCCHistory() {
         },
         {
           subtitle: "Red-Letter Day - March 22, 1975",
-          text: "The 22nd of March, 1975 went down in the History of the MCC as a red-letter day, for it was on this day that the Nirwana Ballroom of the Kuala Lumpur Hilton saw the largest gathering of Ceylonese together with those at the helm of the Government. The MCC organised a tea-reception in honour of the Hon'ble Tun Abdul Razak to congratulate the Tun for the landslide victory of the Barisan Nasional and to rejoice over the appointment of Datuk (Dr) C. Sinnadurai as a Senator to represent the Malaysian Ceylonese. The occasion marked the beginning of true rapport between the MCC and the Government. Tun said that he was pleased to have been able to attend the function and greatly appreciated the support given to the Barisan Nasional by the Malaysian Ceylonese.",
+          text: "The 22nd of March, 1975 went down in the History of the MCC as a red-letter day, for it was on this day that the Nirwana Ballroom of the Kuala Lumpur Hilton saw the largest gathering of Ceylonese together with those at the helm of the Government. The MCC organised a tea-reception in honour of the Hon'ble Tun Abdul Razak to congratulate the Tun for the landslide victory of the Barisan Nasional and to rejoice over the appointment of Datuk (Dr) C. Sinnadurai as a Senator to represent the Malaysian Ceylonese. The occasion marked the beginning of true rapport between the MCC and the Government. Tun said: 'I would like to thank the members of the Malaysian Ceylonese Congress for their support and activities which they carried out, which brought about success in the elections. I would like to say that in order to preserve this victory, we must work and give all our support to the policies and programme which are being implemented by the Government.' In congratulating Datuk (Dr) C. Sinnadurai on his Senate appointment, Tun acknowledged his long service in government, active involvement in welfare and political fields, and said the appointment was in recognition of his many good qualities.",
         },
         {
           subtitle: "Headquarters Building Fund (1976)",
@@ -136,16 +140,81 @@ export default function MCCHistory() {
         },
         {
           subtitle: "Period 1983 - 1987",
-          text: "During this period, the MCC continued its activities in accordance with its objectives, focusing on community unity, representation, and organisational stability. The organization maintained its commitment to strengthening efforts in community representation, with leadership transition completed according to the MCC Constitution. After the assembly, the organisation continued to maintain contact with government departments and statutory bodies to ensure that issues affecting the Malaysian Ceylonese community were voiced and addressed at appropriate levels.",
+          text: "During this period, the MCC continued its activities in accordance with its objectives, focusing on community unity, representation, and organisational stability. The organization maintained its commitment to strengthening efforts in community representation, with leadership transition completed according to the MCC Constitution. After the assembly, the organisation continued to maintain contact with government departments and statutory bodies to ensure that issues affecting the Malaysian Ceylonese community were voiced and addressed at appropriate levels. MCC also pursued deeper community engagement through youth programs, cultural events, and educational campaigns to strengthen communal identity and participation across all regions.",
+        },
+        {
+          subtitle: "President's Message on Community Unity",
+          text: "On reflection of the community's challenges, the President conveyed: 'We the Ceylonese have neither political power nor economic strength hence the need for an organization like the Malaysian Ceylonese Congress so that our voice could be heard in and outside Parliament. The Government's recognition of the M.C.C. has already re-awakened our faith and hope. We have the capability to overcome the hard realities of our times, if only we have the will and if our past mistrust and recrimination give way to mutual understanding, respect for each other, and a meaningful co-operation. M.C.C. is like a family, capable of healthy growth, through tolerance, forbearance and greater understanding of our people and problems.'",
         },
       ],
     },
     {
-      id: 5,
-      title: "Legacy and Community Impact",
-      period: "Throughout the Years",
-      color: "from-blue-900 to-blue-950",
-      icon: "💼",
+      id: 6,
+      title: "Organisational Continuity and Modern Era",
+      period: "1987 - 2006",
+      color: "from-blue-700 to-blue-800",
+      icon: "🌍",
+      content: [
+        {
+          subtitle: "Fourth Biennial Central General Assembly (September 1983)",
+          text: "The Fourth Biennial Central General Assembly of the Malaysian Ceylonese Congress was held in September 1983 in Kuala Lumpur. At this Assembly, Tan Sri Dato' Seri V. Jeyaratnam was declared duly elected unopposed as President of the Malaysian Ceylonese Congress. The outgoing President thanked members for their support and cooperation during his tenure. Delegates from various Branches and States participated in the assembly, expressing their support for continued progress and unity under the MCC banner.",
+        },
+        {
+          subtitle: "Continuity of Administration (1983-1987)",
+          text: "Following the Assembly, the Congress continued to function in accordance with its Constitution and objectives. The organisation maintained stability in administration and continued its role as the representative body of the Malaysian Ceylonese community. No major structural or constitutional changes were implemented during this period, allowing the organization to focus on steady implementation of its established programs and community engagement initiatives.",
+        },
+        {
+          subtitle: "Continuation of MCC Functions (1987-1988)",
+          text: "During the period 1987-1988, the Malaysian Ceylonese Congress continued its organisational activities without major structural or constitutional changes. The Congress remained committed to unity, representation, and service to the community. Branches continued to function and participate in community-related activities, maintaining MCC's presence at the grassroots level across all regions.",
+        },
+        {
+          subtitle: "Ongoing Community Engagement (1991)",
+          text: "In 1991, MCC continued its involvement in matters affecting the Malaysian Ceylonese community. The organisation operated in line with its established objectives and constitutional framework. No major changes to the structure or administration of the Congress were recorded during this period. MCC maintained continuity in its representative role while focusing on grassroots community development.",
+        },
+        {
+          subtitle: "Sustained Operations (1992)",
+          text: "During 1992, the Malaysian Ceylonese Congress sustained its operations and organisational framework. Activities were carried out in accordance with the Constitution and established practices. The Congress continued to focus on unity, representation, and community welfare, consistent with its founding aims. Branch activities were strengthened to ensure effective representation at all levels.",
+        },
+        {
+          subtitle: "Alignment with Vision 2020 (1990s)",
+          text: "The Malaysian Ceylonese Congress aligned its outlook with Malaysia's Vision 2020. Emphasis was placed on education, unity, progress, and active participation in national development. MCC positioned the Malaysian Ceylonese community within the broader national vision, encouraging participation in Malaysia's long-term development goals and inclusive nation-building.",
+        },
+        {
+          subtitle: "Administrative Stability (2002-2003)",
+          text: "During this period, the Congress continued to function steadily in accordance with its objectives. Administrative continuity and organisational stability were maintained. MCC continued to serve as a representative organisation for the Malaysian Ceylonese community without major structural changes. The focus remained on steady implementation of community programs and sustained representation.",
+        },
+        {
+          subtitle: "Continuing the MCC Legacy (2004-2006)",
+          text: "From 2004 onwards, the Malaysian Ceylonese Congress continued its role as the representative body of the Malaysian Ceylonese community. The organisation carried forward its established objectives and organisational framework. MCC remained committed to unity, representation, and service, maintaining continuity with its historical mission and ensuring the preservation of Ceylonese heritage in Malaysia while fostering integration and participation in national development.",
+        },
+        {
+          subtitle: "Community Representation and Stability (1991)",
+          text: "In 1991, MCC continued its involvement in matters affecting the Malaysian Ceylonese community. The organisation operated in line with its established objectives and constitutional framework. No major changes to the structure or administration of the Congress were recorded during this period as MCC maintained continuity in its representative role.",
+        },
+        {
+          subtitle: "Maintaining Organisational Framework (1992)",
+          text: "During 1992, the Malaysian Ceylonese Congress sustained its operations and organisational framework. Activities were carried out in accordance with the Constitution and established practices. The Congress continued to focus on unity, representation, and community welfare, consistent with its founding aims.",
+        },
+        {
+          subtitle: "Vision 2020 and the Community (1990s)",
+          text: "The Malaysian Ceylonese Congress aligned its outlook with Malaysia's Vision 2020. Emphasis was placed on education, unity, progress, and active participation in national development. MCC positioned the Malaysian Ceylonese community within the broader national vision, encouraging participation in Malaysia's long-term development goals.",
+        },
+        {
+          subtitle: "Organisational Continuity (2002-2003)",
+          text: "During this period, the Congress continued to function steadily in accordance with its objectives. Administrative continuity and organisational stability were maintained. MCC continued to serve as a representative organisation for the Malaysian Ceylonese community without major structural changes.",
+        },
+        {
+          subtitle: "Continuing the MCC Legacy (2004-2006)",
+          text: "From 2004 onwards, the Malaysian Ceylonese Congress continued its role as the representative body of the Malaysian Ceylonese community. The organisation carried forward its established objectives and organisational framework. MCC remained committed to unity, representation, and service, maintaining continuity with its historical mission and ensuring the preservation of Ceylonese heritage in Malaysia.",
+        },
+      ],
+    },
+    {
+      id: 7,
+      title: "Key Milestones",
+      period: "Historical Highlights",
+      color: "from-red-600 to-red-700",
+      icon: "⭐",
       content: [
         {
           subtitle: "Community Welfare and Mutual Aid",
@@ -266,6 +335,31 @@ export default function MCCHistory() {
                 year: "1983",
                 title: "New Leadership",
                 desc: "V. Jeyaratnam elected as President",
+              },
+              {
+                year: "1987",
+                title: "Continuity",
+                desc: "Sustained organizational activities continue",
+              },
+              {
+                year: "1991",
+                title: "Representation",
+                desc: "Community engagement maintained steadily",
+              },
+              {
+                year: "1992",
+                title: "Framework",
+                desc: "Organizational structure sustained and strengthened",
+              },
+              {
+                year: "2002-2003",
+                title: "Stability",
+                desc: "Administrative continuity and organizational growth",
+              },
+              {
+                year: "2004-2006",
+                title: "Legacy",
+                desc: "MCC continues founding principles and community service",
               },
             ].map((milestone, idx) => (
               <div
