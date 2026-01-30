@@ -1,12 +1,13 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import BranchesMap from "@/components/branches-map"
 
 export default function ContactPage() {
   return (
     <main className="flex flex-col w-full">
       <Header />
 
-      <section className="bg-gradient-to-r from-[#CE0000] to-[#003087] text-white py-12 sm:py-16 lg:py-20">
+      <section className="bg-gradient-to-r from-[#CE0000] to-[#003087] text-white py-12 sm:py-6 lg:py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Contact Us</h1>
           <p className="text-lg text-gray-100">Get in touch with Malaysian Ceylonese Congress</p>
@@ -59,20 +60,13 @@ export default function ContactPage() {
                   <br />
                   Kuala Lumpur, Malaysia
                 </p>
-                {/* <p className="text-sm">
-                  <span className="font-bold">Phone:</span> +60 3 XXXX XXXX
-                </p> */}
+               
                 <p className="text-sm">
                   <span className="font-bold">Email:</span> info@mcc1958.com
                 </p>
               </div>
 
-              <div className="bg-white border-2 border-[#CE0000] rounded-lg p-6">
-                <h3 className="text-xl font-bold text-[#003087] mb-4">Office Hours</h3>
-                <p className="text-gray-600 text-sm mb-2">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p className="text-gray-600 text-sm mb-2">Saturday: 10:00 AM - 3:00 PM</p>
-                <p className="text-gray-600 text-sm">Sunday: Closed</p>
-              </div>
+      
 
               <div>
                 <h3 className="text-xl font-bold text-[#003087] mb-4">Follow Us</h3>
@@ -91,6 +85,9 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Branch Locations Map */}
+      <BranchesMap />
 
       <Footer />
     </main>

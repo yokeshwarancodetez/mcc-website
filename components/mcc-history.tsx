@@ -245,8 +245,11 @@ export default function MCCHistory() {
             <span className="text-xs sm:text-sm font-bold text-red-700 tracking-widest uppercase">Our Rich Heritage</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-4 leading-tight">
-            History of the Malaysian Ceylonese Congress
-          </h2>
+  History of the
+  <br />
+  Malaysian Ceylonese Congress
+</h2>
+
           <p className="text-base sm:text-lg text-blue-900 font-semibold mb-4">A Legacy Spanning Over 125 Years</p>
           <div className="flex justify-center gap-2 mb-6">
             <div className="h-1 w-16 bg-red-700 rounded-full"></div>

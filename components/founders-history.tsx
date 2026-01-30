@@ -91,11 +91,8 @@ His tenure and affiliation with the MCC, a political party established to promot
     title: "President – Malaysian Ceylonese Congress",
     years: "2018 – Present",
     image: "/Mahendranathan Thuraiappah.jpg",
-    description: `Mahendranathan Thuraiappah is the President of the Malaysian Ceylonese Congress (MCC). He assumed the leadership role in 2018.
-Leadership: He has led the party through multiple terms, recently chairing the 23rd Biennial Central General Assembly in March 2025 and the Annual General Meeting in late 2025.
-Professional Background: Outside of politics, he is a Tax Consultant and a retired senior officer from the Inland Revenue Board of Malaysia, where he served for over 30 years.
-Political Advocacy: Under his presidency, the MCC has focused on reactivating regional branches and advocating for the Malaysian Ceylonese community's representation in the mainstream political landscape.
-Recent Engagements: In June 2025, he met with the Director-General of the Registry of Societies (ROS) to discuss party constitutional amendments and financial statement submissions. 
+    description: `Mahendranathan Thuraiappah is the President of the Malaysian Ceylonese Congress (MCC). He assumed the leadership role in 2018. He has led the party through multiple terms, recently chairing the 23rd Biennial Central General Assembly in March 2025 and the Annual General Meeting in late 2025.
+Professional Background: Outside of politics, he is a Tax Consultant and a retired senior officer from the Inland Revenue Board of Malaysia, where he served for over 30 years. Under his presidency, the MCC has focused on reactivating regional branches and advocating for the Malaysian Ceylonese community's representation in the mainstream political landscape. In June 2025, he met with the Director-General of the Registry of Societies (ROS) to discuss party constitutional amendments and financial statement submissions. 
 .`,
   },
 ]
@@ -137,12 +134,13 @@ export default function FoundersHistory() {
               </div>
 
               <div className="bg-gray-900 py-4 text-center">
-                <h4 className="text-white text-xl font-bold">
+                <h4 className="text-white text-base font-bold whitespace-nowrap">
                   {current.name}
                 </h4>
               </div>
             </div>
 
+\
             <div className="flex items-center gap-6 mt-8">
               <button
                 onClick={() =>
@@ -180,7 +178,7 @@ export default function FoundersHistory() {
             </p>
 
             {/* ✅ Blue border removed */}
-            <div className="bg-blue-50 px-8 py-6 rounded">
+            <div className="bg-blue-50 px-8 py-6 rounded h-110">
               <p className="text-gray-800 leading-relaxed text-base sm:text-lg whitespace-pre-line">
                 {current.description}
               </p>

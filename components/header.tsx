@@ -49,9 +49,12 @@ export default function Header() {
       href: "/about",
       submenu: [
         { label: "About Us", href: "/about" },
-        { label: "Founders", href: "/about/founder" },
+        { label: "Founders & President", href: "/about/founder" },
         { label: "President's Message", href: "/about/president-message" },
         { label: "Our History", href: "/about/our-history" },
+        { label: "Dairy of events", href: "/about/dairy-of-events" },
+        { label: "Achievements", href: "/about/achievements" },
+        { label: "Highlights", href: "/about/highlights" },
       ],
     },
     { label: "CWC", href: "/organisation/central-working-committee" },

@@ -53,7 +53,7 @@ export default function HighlightsPage() {
 
   return (
     <main className="flex flex-col w-full">
-      <Header />
+   
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-16 sm:py-6 lg:py-8">
@@ -152,22 +152,8 @@ export default function HighlightsPage() {
       </section>
 
       {/* Summary */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-[#003087] to-[#CE0000] text-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-6">A Legacy of Progress</h2>
-          <p className="text-base sm:text-lg leading-relaxed mb-6">
-            The year 2013 was a significant milestone in MCC's journey, marked by cultural celebrations, community empowerment,
-            infrastructure development, and unprecedented recognition of leadership. These achievements reflect MCC's commitment to
-            serving the community while upholding cultural heritage and contributing to national development.
-          </p>
-          <p className="text-sm sm:text-base text-gray-100 italic">
-            From cultural performances to national honours, 2013 showcased the diversity and dedication of the Malaysian Ceylonese
-            Congress.
-          </p>
-        </div>
-      </section>
+      
 
-      <Footer />
     </main>
   )
 }

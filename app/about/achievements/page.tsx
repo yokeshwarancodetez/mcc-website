@@ -97,8 +97,8 @@ export default function AchievementsPage() {
   ]
 
   return (
-    <main className="flex flex-col w-full">
-      <Header />
+    <main className="flex flex-col w-full mb-30">
+   
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-12 sm:py-6 lg:py-8">
@@ -125,26 +125,12 @@ export default function AchievementsPage() {
           </div>
 
           {/* Category Stats */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {[
-              { label: "Political", count: "1" },
-              { label: "Infrastructure", count: "1" },
-              { label: "Community", count: "1" },
-              { label: "Education", count: "1" },
-              { label: "Healthcare", count: "1" },
-              { label: "Administration", count: "1" },
-            ].map((stat, idx) => (
-              <div key={idx} className="bg-gradient-to-br from-red-50 to-blue-50 border border-gray-200 rounded-lg p-4 text-center">
-                <p className="text-2xl sm:text-3xl font-bold text-red-700">{stat.count}</p>
-                <p className="text-xs sm:text-sm text-gray-600 mt-1">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+      
         </div>
       </section>
 
       {/* Achievements Cards */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-gray-50 to-white">
+      <section className="py-12 sm:py-16 lg:py-0 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12 sm:space-y-16">
             {achievements.map((achievement) => (
@@ -192,7 +178,7 @@ export default function AchievementsPage() {
       </section>
 
       {/* Summary Section */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-900 to-red-700 text-white">
+      {/* <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-r from-blue-900 to-red-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             <div>
@@ -223,9 +209,9 @@ export default function AchievementsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <Footer />
+   
     </main>
   )
 }
