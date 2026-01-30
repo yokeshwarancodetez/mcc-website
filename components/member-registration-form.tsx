@@ -4,7 +4,8 @@ import type React from "react"
 
 import { useState } from "react"
 
-type MembershipType = "associate" | "ordinary"
+type MembershipType = "associate" | "ordinary" | "lifetime"
+
 
 interface FormData {
   fullName: string
