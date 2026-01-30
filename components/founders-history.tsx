@@ -140,7 +140,7 @@ export default function FoundersHistory() {
               </div>
             </div>
 
-\
+
             <div className="flex items-center gap-6 mt-8">
               <button
                 onClick={() =>

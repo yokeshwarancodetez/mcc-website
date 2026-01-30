@@ -5,17 +5,16 @@ import Link from "next/link"
 
 const slides = [
   {
+    type: "image",
     heading: "Welcome to Malaysian Ceylonese Congress",
     subheading:
       "Since 1958, Over Six Decades of Service, Integrity, and Community Leadership. Building a stronger tomorrow through unity and excellence.",
     buttonText: "Learn More",
-    image: "/mcc_banner.png",
+    src: "/mcc_banner_01.png",
   },
   {
-    heading: "Empowering Our Youth",
-    subheading: "Scholarships, mentorship, and opportunities for the next generation of leaders.",
-    buttonText: "Explore Programs",
-    image: "/mcc_banner_01.png",
+    type: "video",
+    src: "/mcc-video.mp4",
   },
 ]
 
@@ -27,12 +26,9 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length)
-    }, 6000)
+    }, 8000)
     return () => clearInterval(timer)
   }, [])
-
-  const next = () => setCurrent((prev) => (prev + 1) % slides.length)
-  const prev = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length)
 
   const handleTouchStart = (e: React.TouchEvent) => {
     touchStartX.current = e.targetTouches[0].clientX
@@ -44,82 +40,94 @@ export default function Hero() {
 
   const handleTouchEnd = () => {
     if (!touchStartX.current || !touchEndX.current) return
-
     const distance = touchStartX.current - touchEndX.current
-    if (distance > 50) next()
-    if (distance < -50) prev()
-
+    if (distance > 50) setCurrent((p) => (p + 1) % slides.length)
+    if (distance < -50) setCurrent((p) => (p - 1 + slides.length) % slides.length)
     touchStartX.current = null
     touchEndX.current = null
   }
+
+  const slide = slides[current]
 
   return (
     <section
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className="
-        relative w-full 
-        min-h-[68vh] sm:min-h-[75vh] lg:min-h-[85vh] 
-        flex items-center overflow-hidden
-        bg-transparent sm:bg-black
-      "
+      className="relative w-full min-h-[70vh] sm:min-h-[80vh] lg:min-h-[90vh] overflow-hidden bg-black"
     >
-      {/* Background Image */}
-      <div
-        key={current}
-        className="absolute inset-0 bg-no-repeat bg-center bg-contain sm:bg-cover transition-all duration-700"
-        style={{ backgroundImage: `url('${slides[current].image}')` }}
-      />
-
-      {/* Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-10 w-full flex items-center justify-center lg:justify-start">
-        <div className="w-full lg:w-1/2 text-center lg:text-left pt-4 sm:pt-0">
-
+      {/* ================= BACKGROUND ================= */}
+      <div className="absolute inset-0 z-0 bg-black">
+        {slide.type === "image" && (
           <div
+            className="w-full h-full bg-center bg-contain sm:bg-cover bg-no-repeat transition-opacity duration-700"
+            style={{ backgroundImage: `url('${slide.src}')` }}
+          />
+        )}
+
+        {slide.type === "video" && (
+          <video
+            key={slide.src}
+            src={slide.src}
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            disablePictureInPicture
+            controls={false}
             className="
-              bg-transparent sm:bg-gradient-to-br sm:from-black/60 sm:via-black/30 sm:to-transparent 
-              rounded-xl sm:rounded-2xl 
-              p-4 sm:p-7 lg:p-9 
-              max-w-xl mx-auto lg:mx-0
+              w-full h-full
+              object-contain
+              bg-black
+              animate-fadeIn
+              will-change-transform
             "
-          >
-            <h1 className="text-lg sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-snug sm:leading-tight drop-shadow-xl">
-              {slides[current].heading}
-            </h1>
+          />
+        )}
+      </div>
 
-            <p className="mt-3 sm:mt-4 text-xs sm:text-base md:text-lg lg:text-xl text-white/95 leading-relaxed drop-shadow-lg">
-              {slides[current].subheading}
-            </p>
+      {/* ================= CONTENT (IMAGE SLIDE ONLY) ================= */}
+      {slide.type === "image" && (
+        <div className="relative z-10 max-w-7xl mx-auto px-4 h-full flex items-center">
+          <div className="w-full lg:w-1/2 text-center lg:text-left">
+            <div className="bg-black/55 sm:bg-gradient-to-br sm:from-black/70 sm:via-black/40 sm:to-transparent rounded-2xl p-6 sm:p-8 lg:p-10 max-w-xl mx-auto lg:mx-0">
+              <h1 className="text-xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
+                {slide.heading}
+              </h1>
 
-            <div className="mt-4 sm:mt-5 w-12 sm:w-24 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-full mx-auto lg:mx-0"></div>
+              <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-xl text-white/95 leading-relaxed">
+                {slide.subheading}
+              </p>
 
-            {/* Buttons hidden on mobile */}
-            <div className="hidden sm:flex mt-4 sm:mt-6 flex-col sm:flex-row gap-2 sm:gap-4 justify-center lg:justify-start">
-              <button className="px-4 py-2 sm:px-9 sm:py-3.5 bg-gradient-to-r from-red-700 to-blue-900 text-white font-semibold sm:font-bold rounded-md sm:rounded-lg hover:scale-105 transition uppercase tracking-wide text-[11px] sm:text-base shadow-lg">
-                {slides[current].buttonText}
-              </button>
+              <div className="mt-5 w-20 h-1 bg-gradient-to-r from-red-700 to-blue-900 rounded-full mx-auto lg:mx-0" />
 
-              <Link href="/membership">
-                <button className="px-4 py-2 sm:px-9 sm:py-3.5 bg-white/20 border border-white/40 text-white font-semibold sm:font-bold rounded-md sm:rounded-lg hover:bg-white/30 transition uppercase tracking-wide text-[11px] sm:text-base backdrop-blur shadow-lg">
-                  Join MCC
+              <div className="hidden sm:flex mt-6 gap-4 justify-center lg:justify-start">
+                <button className="px-8 py-3 bg-gradient-to-r from-red-700 to-blue-900 text-white font-bold rounded-lg hover:scale-105 transition">
+                  {slide.buttonText}
                 </button>
-              </Link>
+
+                <Link href="/membership">
+                  <button className="px-8 py-3 bg-white/20 border border-white/40 text-white font-bold rounded-lg hover:bg-white/30 transition backdrop-blur">
+                    Join MCC
+                  </button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      )}
 
-      {/* Dots */}
-      <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2 bg-black/40 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full backdrop-blur-md border border-white/20">
+      {/* ================= DOTS ================= */}
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 bg-black/50 px-4 py-2 rounded-full backdrop-blur border border-white/20">
         {slides.map((_, idx) => (
           <button
             key={idx}
             onClick={() => setCurrent(idx)}
-            className={`rounded-full transition-all duration-300 ${
+            className={`rounded-full transition-all ${
               idx === current
-                ? "bg-red-600 w-6 sm:w-7 h-2"
-                : "bg-white/60 w-2 h-2 hover:bg-white"
+                ? "bg-red-600 w-7 h-2"
+                : "bg-white/70 w-2 h-2"
             }`}
           />
         ))}
