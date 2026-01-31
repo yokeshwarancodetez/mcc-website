@@ -116,17 +116,24 @@ export default function CurrentOfficeBarersPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-[#003087] to-[#CE0000] py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">Current President</h1>
-          <p className="text-lg text-white/90 max-w-3xl mx-auto">
-            SENARAI AHLI-AHLI JAWATANKUASA 2025-2026
-          </p>
-          <p className="text-base text-white/80 mt-4 max-w-3xl mx-auto">
-            Meet the dedicated office bearers and committee members leading the Malaysian Ceylonese Congress with integrity, unity, service, and excellence.
-          </p>
-        </div>
-      </div>
+  <div className="bg-gradient-to-r from-[#003087] to-[#CE0000] py-8 px-4 sm:px-6 lg:px-6">
+  <div className="max-w-7xl mx-auto text-left">
+    
+    <h1 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+      Current President
+    </h1>
+
+    <p className="text-lg text-white/90 max-w-3xl">
+      SENARAI AHLI-AHLI JAWATANKUASA 2025-2026
+    </p>
+
+    <p className="text-base text-white/80 mt-4 max-w-3xl">
+      Meet the dedicated office bearers and committee members leading the Malaysian Ceylonese Congress with integrity, unity, service, and excellence.
+    </p>
+
+  </div>
+</div>
+
 
       {/* All Office Bearers - 4 Column Grid */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -167,10 +174,10 @@ export default function CurrentOfficeBarersPage() {
                   </div>
 
                   {/* Name */}
-                  <h3 className="text-sm font-bold text-gray-900 mb-2 line-clamp-2 flex-grow">{bearer.name}</h3>
+                  <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-2 flex-grow">{bearer.name}</h3>
 
                   {/* Position */}
-                  <p className="text-xs text-[#003087] font-semibold mb-3 line-clamp-2">{bearer.position}</p>
+                  <p className="text-base text-[#003087] font-semibold mb-3 line-clamp-2">{bearer.position}</p>
 
                   {/* Bio */}
                   {/* <p className="text-xs text-gray-700 leading-relaxed mb-3 line-clamp-3 flex-grow">{bearer.bio}</p> */}

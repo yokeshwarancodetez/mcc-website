@@ -63,10 +63,10 @@ export default function DiaryOfEventsPage() {
       <section className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-10">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex items-center gap-3 mb-3">
-            <Calendar className="w-8 h-8" />
-            <span className="text-sm font-semibold uppercase tracking-widest">
+            {/* <Calendar className="w-8 h-8" /> */}
+            {/* <span className="text-sm font-semibold uppercase tracking-widest">
               Community Timeline
-            </span>
+            </span> */}
           </div>
           <h1 className="text-3xl sm:text-4xl font-bold mb-3">
             Diary of Events

@@ -2,7 +2,7 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* ✅ Hero Section (Reduced Size) */}
-      <div className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-6 md:py-8">
+      <div className="bg-gradient-to-r from-[#003087] to-[#CE0000] text-white py-6 md:py-6">
         <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
           <h1 className="text-xl md:text-3xl lg:text-4xl font-semibold mb-2">
             About MCC
