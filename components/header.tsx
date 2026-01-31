@@ -51,6 +51,7 @@ export default function Header() {
         { label: "About Us", href: "/about" },
         { label: "Founders & President", href: "/about/founder" },
         { label: "President's Message", href: "/about/president-message" },
+        { label: "Current President", href: "/about/current-president" },
         { label: "Our History", href: "/about/our-history" },
         { label: "Dairy of events", href: "/about/dairy-of-events" },
         { label: "Achievements", href: "/about/achievements" },
