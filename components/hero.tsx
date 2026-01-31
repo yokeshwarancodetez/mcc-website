@@ -14,7 +14,7 @@ const slides = [
   },
   {
     type: "video",
-    src: "/mcc-video.mp4",
+    src: "/mcc-video1.mp4",
   },
 ]
 
