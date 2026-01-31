@@ -20,9 +20,7 @@ const founders: Founder[] = [
     years: "1958 – 1969",
     image: "/founder-image.png",
     description: `M.W. Navaratnam was a key figure in the Malaysian Ceylonese community, serving as the president of the Malayan/Malaysian Ceylonese Congress (MCC) from 1958 to 1969. 
-Role in MCC: He was the driving force behind the formation of the Malayan Ceylonese Congress (now Malaysian Ceylonese Congress) in 1958.
-Establishment: In January 1958, under his leadership, members of the Selangor Ceylonese Association (founded in 1900) met and decided to transform the association into a political party to represent the interests of Malaysians of Sri Lankan descent.
-Leadership Duration: He led the organization during its crucial, early developmental years, from its inception in 1958 until 1969, at which point he was succeeded by Senator Tan Sri Dato' Sri Dr. C. Sinnadurai.
+Role in MCC: He was the driving force behind the formation of the Malayan Ceylonese Congress (now Malaysian Ceylonese Congress) in 1958. In January 1958, under his leadership, members of the Selangor Ceylonese Association (founded in 1900) met and decided to transform the association into a political party to represent the interests of Malaysians of Sri Lankan descent. He led the organization during its crucial, early developmental years, from its inception in 1958 until 1969, at which point he was succeeded by Senator Tan Sri Dato' Sri Dr. C. Sinnadurai.
 `,
   },
   {
@@ -90,9 +88,8 @@ His tenure and affiliation with the MCC, a political party established to promot
     name: "Mahendranathan Thuraiappah",
     title: "President – Malaysian Ceylonese Congress",
     years: "2018 – Present",
-    image: "/Mahendranathan Thuraiappah.jpg",
-    description: `Mahendranathan Thuraiappah is the President of the Malaysian Ceylonese Congress (MCC). He assumed the leadership role in 2018. He has led the party through multiple terms, recently chairing the 23rd Biennial Central General Assembly in March 2025 and the Annual General Meeting in late 2025.
-Professional Background: Outside of politics, he is a Tax Consultant and a retired senior officer from the Inland Revenue Board of Malaysia, where he served for over 30 years. Under his presidency, the MCC has focused on reactivating regional branches and advocating for the Malaysian Ceylonese community's representation in the mainstream political landscape. In June 2025, he met with the Director-General of the Registry of Societies (ROS) to discuss party constitutional amendments and financial statement submissions. 
+    image: "/founder-1.jpeg",
+    description: `Mahendranathan Thuraiappah is the President of the Malaysian Ceylonese Congress (MCC). He assumed the leadership role in 2018. He has led the party through multiple terms, recently chairing the 23rd Biennial Central General Assembly in March 2025 and the Annual General Meeting in late 2025. Outside of politics, he is a Tax Consultant and a retired senior officer from the Inland Revenue Board of Malaysia, where he served for over 30 years. Under his presidency, the MCC has focused on reactivating regional branches and advocating for the Malaysian Ceylonese community's representation in the mainstream political landscape. In June 2025, he met with the Director-General of the Registry of Societies (ROS) to discuss party constitutional amendments and financial statement submissions. 
 .`,
   },
 ]
@@ -178,11 +175,27 @@ export default function FoundersHistory() {
             </p>
 
             {/* ✅ Blue border removed */}
-            <div className="bg-blue-50 px-8 py-6 rounded h-110">
-              <p className="text-gray-800 leading-relaxed text-base sm:text-lg whitespace-pre-line">
-                {current.description}
-              </p>
-            </div>
+  {/* DESCRIPTION BOX */}
+<div
+  className="
+    bg-blue-50
+    px-4 sm:px-6 lg:px-10
+    py-4 sm:py-6
+    rounded-lg
+    flex-1
+    min-h-[260px]
+    sm:min-h-[320px]
+    lg:min-h-[450px]
+    overflow-y-auto
+  "
+>
+  <p className="text-gray-800 leading-relaxed text-sm sm:text-base lg:text-lg whitespace-pre-line">
+    {current.description}
+  </p>
+</div>
+
+
+
 
           </div>
 

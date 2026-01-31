@@ -86,7 +86,7 @@ His tenure and affiliation with the MCC, a political party established to promot
     name: "Mahendranathan Thuraiappah",
     title: "President – Malaysian Ceylonese Congress",
     years: "2018 – Present",
-    image: "/Mahendranathan Thuraiappah.jpg",
+    image: "/founder-1.jpeg",
     description: `Mahendranathan Thuraiappah is the President of the Malaysian Ceylonese Congress (MCC). He assumed the leadership role in 2018. He has led the party through multiple terms, recently chairing the 23rd Biennial Central General Assembly in March 2025 and the Annual General Meeting in late 2025.
 Professional Background: Outside of politics, he is a Tax Consultant and a retired senior officer from the Inland Revenue Board of Malaysia, where he served for over 30 years.
 Political Advocacy: Under his presidency, the MCC has focused on reactivating regional branches and advocating for the Malaysian Ceylonese community's representation in the mainstream political landscape. In June 2025, he met with the Director-General of the Registry of Societies (ROS) to discuss party constitutional amendments and financial statement submissions. 
